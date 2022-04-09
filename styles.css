@@ -189,7 +189,7 @@ button[type=submit] {
 }
 
 .col-1{
-    width:895px;
+    max-width:895px;
 }
 
 .col-2{
