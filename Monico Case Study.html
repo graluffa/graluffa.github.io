@@ -112,8 +112,8 @@
         }
 
         .UCD-header {
-            margin-left: 8.3em;
             font-weight: bolder;
+            padding: 0 16px;
         }
 
         ul {
@@ -124,12 +124,86 @@
             margin-bottom: 8px;
         }
 
+        .navigation-mobile {
+                display: none;
+        }
+
+        @media screen and (max-width: 800px){
+            body > header div ul {
+                max-width: 100%;
+            }
+            .navigation {
+                display: none;
+            }
+            nav {
+                padding-top:50px;
+            }
+
+            .navigation-mobile {
+                top: 0px;
+                margin-top: 0px;
+                display: flex;
+                flex-direction: row;
+                padding: 0;
+                width: 100%;
+                height: auto;
+                justify-content: center;
+                overflow: scroll;
+                position: fixed;
+                text-align: left;
+                z-index: 100;
+                background: #3cb8b4;
+                margin-bottom: 0;
+            }
+
+            .navigation-mobile > li {
+                list-style: none;
+            }
+
+            .navigation-mobile li {
+                padding: 16px 24px;
+            }
+
+            .navigation-mobile li a {
+                color: #fff;
+            }
+
+            .reflections-text {
+                display:none;
+            }
+
+            .case-study {
+                margin: 0;
+            }
+
+
+            .case-study-teaser {
+                max-width: 100%;
+                width:100%;
+                display: flex;
+                flex-direction: column-reverse;
+            }
+
+            body > header div {
+                display: block;
+            }
+
+        }
+
 
             @media screen and (min-width: 48em) {}
     </style>
 </head>
 
 <body>
+    <nav role="navigation-mobile">
+        <ul class="navigation-mobile">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="index.html#myWork">Work</a></li>
+            <li><a href="index.html#aboutMe">About</a></li>
+            <li><a href="index.html#contactForm">Contact</a></li>
+        </ul>
+    </nav>
     <header>
         <a href="./index.html"><img id="siteLogo" src="./images/Logo.png" alt="Grace Peng, designer, logo" /></a>
         <div>
@@ -137,7 +211,7 @@
                 <h1 id="top">Grace Peng</h1>
             </a>
             <nav role="navigation">
-                <ul>
+                <ul class="navigation">
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="index.html#myWork">Work</a></li>
                     <li><a href="index.html#aboutMe">About</a></li>
@@ -186,130 +260,145 @@
             </div>
         </div>
     </section>
-    <section>
-        <h2 class="UCD-header">The Challenge</h2>
-        <div class="text-group">
-            <p class="large-paragraph medium-spacer col-1">
-                Finally after years of pandemic, normal traveling is resuming. How does planning and actually traveling
-                go again? What events are happening in this other country and are all the stores and restaurants even
-                there anymore?
-                <br><br>That is a challenge Monico aimed to address. Following the design thinking process, we aimed to
-                develop a site and phone app that aids in planning trips or connecting with a local who can.
-            </p>
-            <p class="reflections-text col-2">
-                See my notes and reflections in these side notes over here!
-            </p>
+    <section class="case-wrapper">
+        <div>
+            <h2 class="UCD-header">The Challenge</h2>
+            <div class="text-group">
+                <p class="large-paragraph medium-spacer col-1">
+                    Finally after years of pandemic, normal traveling is resuming. How does planning and actually traveling
+                    go again? What events are happening in this other country and are all the stores and restaurants even
+                    there anymore?
+                    <br><br>That is a challenge Monico aimed to address. Following the design thinking process, we aimed to
+                    develop a site and phone app that aids in planning trips or connecting with a local who can.
+                </p>
+                <p class="reflections-text col-2">
+                    See my notes and reflections in these side notes over here!
+                </p>
+            </div>
+
         </div>
 
-        <h2 class="UCD-header">Explorations & Research</h2>
-        <div class="text-group">
-            <p class="large-paragraph medium-spacer col-1">
-                We used affinity diagrams to generate open-ended research questions for user interviews. With our
-                refined list, we interviewed 5 individuals that regularly travel (pandemic aside). We asked questions
-                like: Tell me about some challenges you've experienced while traveling or planning a trip. How was
-                navigating in a foreign country? Any challenges communicating with locals? Walk me through your planning
-                process.
-                <br>
-                <br>
-                <img src="./images/monicoaffinitymap1.jpg" alt="monico affinity map" />
-                <br>
-                <strong>An initial finding from our interviews:</strong>
-                Our users like to know where locals go and what events are happening.
-                <br>
-                <br>
-                We conducted Maze surveys to collect feedback on app and website features.
-            </p>
-            <p class="reflections-text col-2">
-                Initially, we thought of creating a translation or language app, but ultimately decided to use the
-                interviews to explore the user's challenges and needs first instead of assuming what they needed.
-                <br>
-                <br>
-                Interviews were completed via telephone and Microsoft Teams video call.
-            </p>
+        <div>
+            <h2 class="UCD-header">Explorations & Research</h2>
+            <div class="text-group">
+                <p class="large-paragraph medium-spacer col-1">
+                    We used affinity diagrams to generate open-ended research questions for user interviews. With our
+                    refined list, we interviewed 5 individuals that regularly travel (pandemic aside). We asked questions
+                    like: Tell me about some challenges you've experienced while traveling or planning a trip. How was
+                    navigating in a foreign country? Any challenges communicating with locals? Walk me through your planning
+                    process.
+                    <br>
+                    <br>
+                    <img src="./images/monicoaffinitymap1.jpg" alt="monico affinity map" />
+                    <br>
+                    <strong>An initial finding from our interviews:</strong>
+                    Our users like to know where locals go and what events are happening.
+                    <br>
+                    <br>
+                    We conducted Maze surveys to collect feedback on app and website features.
+                </p>
+                <p class="reflections-text col-2">
+                    Initially, we thought of creating a translation or language app, but ultimately decided to use the
+                    interviews to explore the user's challenges and needs first instead of assuming what they needed.
+                    <br>
+                    <br>
+                    Interviews were completed via telephone and Microsoft Teams video call.
+                </p>
+            </div>
         </div>
 
-        <h2 class="UCD-header">Analyzing our data</h2>
-        <div class="text-group">
-            <p id="research-synthesis-img" class="large-paragraph medium-spacer col-1">
-                <img src="./images/ResearchSynthesis.png" alt="monico user interview affinity map insights" />
-                <br>
-                Returning to the affinity diagram, our team first categorized answers based on questions we asked then
-                grouped them into major topics. Using this map, we developed our key insights:
-            </p>
-            <p class="reflections-text col-2">
-                Our remote team conducted our gathering and analysis virtually via Figma & Figjam.
-            </p>
+        <div>
+            <h2 class="UCD-header">Analyzing our data</h2>
+            <div class="text-group">
+                <p id="research-synthesis-img" class="large-paragraph medium-spacer col-1">
+                    <img src="./images/ResearchSynthesis.png" alt="monico user interview affinity map insights" />
+                    <br>
+                    Returning to the affinity diagram, our team first categorized answers based on questions we asked then
+                    grouped them into major topics. Using this map, we developed our key insights:
+                </p>
+                <p class="reflections-text col-2">
+                    Our remote team conducted our gathering and analysis virtually via Figma & Figjam.
+                </p>
+            </div>
+    
+            <div class="text-group">
+                <ul class="text-list medium-spacer col-1">
+                    <li><strong>Our users want to feel safe during traveling and know their belongings are secure</strong>
+                    </li>
+                    <li><strong>Our users want to know where to go, what the current events are (local news/major
+                            celebrations)</strong></li>
+                    <li><strong>Our users do not see language as a challenge- many find locals can speak English and will
+                            use a translator book or learn the language if needed.</strong></li>
+                </ul>
+                <p class="reflections-text col-2">
+                    Our research revealed some surprising and humbling data:
+                    <br>Our users did not feel the need for learning a language when traveling abroad and did not encounter
+                    any challenges communicating with locals as we had originally thought.
+                </p>
+            </div>
         </div>
 
-        <div class="text-group">
-            <ul class="text-list medium-spacer col-1">
-                <li><strong>Our users want to feel safe during traveling and know their belongings are secure</strong>
-                </li>
-                <li><strong>Our users want to know where to go, what the current events are (local news/major
-                        celebrations)</strong></li>
-                <li><strong>Our users do not see language as a challenge- many find locals can speak English and will
-                        use a translator book or learn the language if needed.</strong></li>
-            </ul>
-            <p class="reflections-text col-2">
-                Our research revealed some surprising and humbling data:
-                <br>Our users did not feel the need for learning a language when traveling abroad and did not encounter
-                any challenges communicating with locals as we had originally thought.
-            </p>
+        <div>
+            <h2 class="UCD-header">Visualizing and understanding our users</h2>
+            <div class="text-group">
+                <p class="large-paragraph medium-spacer col-1">
+                    With our extensive research completed, it was time to define who our users were. We synthesized all the
+                    interview data and created a user persona.
+                    <img src="./images/MonicoEmpathyMap.png" alt="image of empathy map" />
+                    <img src="./images/MonicoPersonaRachel.png" alt="image of user persona" />
+                </p>
+                <p class="reflections-text col-2">
+                    This persona was helpful in reminding us who we are designing for and to put our opinions aside.
+                </p>
+            </div>
         </div>
 
-        <h2 class="UCD-header">Visualizing and understanding our users</h2>
-        <div class="text-group">
-            <p class="large-paragraph medium-spacer col-1">
-                With our extensive research completed, it was time to define who our users were. We synthesized all the
-                interview data and created a user persona.
-                <img src="./images/MonicoEmpathyMap.png" alt="image of empathy map" />
-                <img src="./images/MonicoPersonaRachel.png" alt="image of user persona" />
-            </p>
-            <p class="reflections-text col-2">
-                This persona was helpful in reminding us who we are designing for and to put our opinions aside.
-            </p>
+        <div>
+            <h2 class="UCD-header">Redefining and comparing</h2>
+            <div class="text-group">
+                <p class="large-paragraph medium-spacer col-1">
+                    Our team needed to redefine our research question based on our findings. We determined our new goal was
+                    to answer this: "How might we provide insider tips from locals to improve travel experiences for our
+                    users?".
+                    <br>We also conducted a competitor analysis to compare current design and content layouts of indirect
+                    and direct competitors.
+                    <br>
+                    <br>
+                    <img src="./images/competitoranalysis.png" alt="competitor analysis diagram" />
+                </p>
+                <p class="reflections-text col-2">
+                    The competitor analysis helped us determine what layouts were user-friendly and what issues we should
+                    avoid as we designed our website.
+                </p>
+            </div>
         </div>
 
-        <h2 class="UCD-header">Redefining and comparing</h2>
-        <div class="text-group">
-            <p class="large-paragraph medium-spacer col-1">
-                Our team needed to redefine our research question based on our findings. We determined our new goal was
-                to answer this: "How might we provide insider tips from locals to improve travel experiences for our
-                users?".
-                <br>We also conducted a competitor analysis to compare current design and content layouts of indirect
-                and direct competitors.
-                <br>
-                <br>
-                <img src="./images/competitoranalysis.png" alt="competitor analysis diagram" />
-            </p>
-            <p class="reflections-text col-2">
-                The competitor analysis helped us determine what layouts were user-friendly and what issues we should
-                avoid as we designed our website.
-            </p>
+        <div>
+            <h2 class="UCD-header">Brainstorming, ideating, rinse, & repeat. </h2>
+            <div class="text-group">
+                <p class="large-paragraph medium-spacer col-1">
+                    Our team used some "How Might We" questions to define . This included: How might we incorporate all of
+                    our users needs (safety and knowledge of events) into one cohesive service? How might we design our
+                    layouts so our user can search for what they need?
+                    <br>
+                    <br>
+                    <img src="./images/Signupwireframe.png" alt="wireframe of Monico sign up page"
+                        style="border:1px solid #3b3434" /><br>
+                    <img src="./images/explorewireframe.png" alt="wireframe of Monico exploration page"
+                        style="border:1px solid #3b3434" /><br>
+                    <img src="./images/planningtripswireframe.png" alt="wireframe of trip planner"
+                        style="border:1px solid #3b3434" /><br>
+                </p>
+                <p class="reflections-text col-2">
+                    During the following few weeks, we used these questions to guide our wireframing and prototyping.
+                </p>
+            </div>
         </div>
-
-        <h2 class="UCD-header">Brainstorming, ideating, rinse, & repeat. </h2>
-        <div class="text-group">
-            <p class="large-paragraph medium-spacer col-1">
-                Our team used some "How Might We" questions to define . This included: How might we incorporate all of
-                our users needs (safety and knowledge of events) into one cohesive service? How might we design our
-                layouts so our user can search for what they need?
-                <br>
-                <br>
-                <img src="./images/Signupwireframe.png" alt="wireframe of Monico sign up page"
-                    style="border:1px solid #3b3434" /><br>
-                <img src="./images/explorewireframe.png" alt="wireframe of Monico exploration page"
-                    style="border:1px solid #3b3434" /><br>
-                <img src="./images/planningtripswireframe.png" alt="wireframe of trip planner"
-                    style="border:1px solid #3b3434" /><br>
-            </p>
-            <p class="reflections-text col-2">
-                During the following few weeks, we used these questions to guide our wireframing and prototyping.
-            </p>
+        <div>
+            <h2 class="UCD-header">Still interested? Come back to see our final product.</h2>
         </div>
     </section>
 
-    <h1 style="margin-left: 6.2em;">Still interested? Come back to see our final product.</h1>
     <footer>
         <ul>
             <li><a href="https://dribbble.com/graceyp" title="dribbble"><i class="fa-solid fa-basketball"></i></a></li>
