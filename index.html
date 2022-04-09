@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf=8">
+    <link rel="icon" href="./images/logofavicon.png" type="image/png" />
+    <title>Grace Peng</title>
+    <script src="https://kit.fontawesome.com/1f06a40a7f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;700&family=Lora&display=swap" rel="stylesheet"> 
+    <link href="./reset.css" rel="stylesheet" />
+    <link href="./styles.css" rel="stylesheet" />
+    <style>
+
+        body {
+            animation: fadeInAnimation ease 2s;
+            animation-iteration-count: 1;
+            animation-fill-mode: backwards;
+        }
+
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .helloIcon{
+            width:50px;
+            margin-bottom:-0.935em;
+        }
+
+        
+        h2 i {
+            font-size: 1.2rem;
+            color: var(--main-color);
+            margin-left: 0.5em
+        }
+
+        #intro{
+            margin-top:auto;
+        }
+
+        #viewWorkButton,
+        #contactButton {
+            padding-top: 0.4em;
+            padding-bottom: 0.4em;
+            width: 140px;
+            text-align: center;
+            border-radius: 5px;
+            border: 2px solid #000;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 0.9rem;
+            margin-right:0.4em;
+
+        }
+
+        .allButtons:hover{
+            transform: scale(1.1);
+            transition: all 0.2s ease-in-out;
+        }
+
+        .work-subheader{
+            font-size:2em;
+        }
+
+        #workHeading{
+            font-size:2em;  
+        }
+
+        #viewWorkButton {
+            background: var(--main-color-faded);
+            color: #000;
+        }
+
+        #viewWorkButton:after {
+            content: ">";
+            display: inline-block;
+            color: #000;
+            margin-left: 0.5em;
+        }
+
+        #contactButton {
+            color: #000;
+        }
+
+
+        .fadein img{
+        transition: 1s ease;
+        }
+
+        .fadein img:hover{
+        opacity:0.5;
+        transition: 1s ease;
+        }
+
+
+        #myWork,
+        #contactForm {
+            background-color: var(--main-color-faded);
+            padding: 1em 3em 3em 3em;
+            margin-left: -1em;
+            margin-right: -1em;
+        }
+
+        #myWork h2 {
+            margin-top: 0;
+            font-size:2em;
+        }
+
+        #myWork article {
+            background-color: #FFF;
+            border-radius: var(--rounded-corner);
+            overflow: hidden;
+        }
+
+        #myWork article:not(:last-of-type) {
+            margin-bottom: 3em;
+        }
+
+        #myWork article div:nth-child(2) {
+            margin: 1em;
+            margin-top:auto;
+            margin-bottom:auto;
+        }
+
+        #myWork article a {
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #aboutMe,
+        #hello {
+            margin-left: -1em;
+            margin-right: -1em;
+        }
+
+        #aboutMe>div:nth-child(2),
+        #hello>div:first-child {
+            margin-left: 3em;
+            margin-right: 3em;
+        }
+
+        #contactForm h2 {
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media screen and (min-width: 48em) {
+            #hello {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding-left: 3em;
+                padding-right: 3em;
+            }
+
+            #hello p {
+                font-size: 2.7rem;
+            }
+
+            #hello>div:first-child {
+                flex: 0 0 60%;
+                margin-right: 0;
+                margin-left: 0;
+            }
+
+            #hello>div:nth-child(2) {
+                flex: 0 0 38%;
+                padding-top: 2em;
+                padding-bottom: 3em;
+            }
+
+            #myWork article {
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+            }
+
+            #myWork article div:first-child {
+                flex: 0 0 44%;
+            }
+
+            #myWork article div:nth-child(2) {
+                flex: 0 0 54%;
+                margin-right: 0;
+            }
+
+            #myWork article div:nth-child(2) h3 {
+                margin-top: 0;
+            }
+
+            #aboutMe {
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            #aboutMe>div:first-child {
+                flex: 0 0 44.5%;
+                overflow: hidden;
+            }
+
+            #aboutMe>div:first-child img {
+                margin-top: -10%;
+                margin-bottom: -15%;
+            }
+
+            #aboutMe>div:nth-child(2) {
+                flex: 0 0 54%;
+                margin-right: 0;
+                margin-left: 0;
+                padding-right: 1em;
+                padding-left: 3em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="./index.html"><img id="siteLogo" src="./images/Logo.png" alt="Grace Peng, designer, logo" /></a>
+        <div>
+            <a href="./index.html"><h1 id="top">Grace Peng</h1></a>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="#myWork">Work</a></li>
+                    <li><a href="#aboutMe">About</a></li>
+                    <li><a href="#contactForm">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="hello">
+            <div class="mbot">
+                <p id="intro"><i id="change" class="fa-solid fa-hands-clapping"></i>
+                    <br/> I'm Grace, a curious UX Designer in Windy City Chicago. </br>I love hearing people's stories and weaving them throughout the production process.</i></p>
+                <div>
+                    <a href="#myWork" id="viewWorkButton" class="allButtons">View My Work</a>
+                    <a href="#contactForm" id="contactButton" class="allButtons">Get in touch</a>
+                </div>
+            </div>
+            <div>
+                <img id="introGrace" src="./images/Cartoongracedesignthink.png" alt="picture of Grace Peng" />
+            </div>
+        </section>
+        <section id="myWork">
+            <h1 id="workHeading">Featured Work<a href="#top" title="back to top"><i class="fa-solid fa-chevron-circle-up"></i></a></h1>
+
+            <article>
+                <div class="fadein">
+                    <a href="./Monico Case Study.html"><img src="./images/SignUpPage.png" alt="monico sign up page" /></a>
+                </div>
+                <div>
+                    <h2 class="work-subheader">Monico Case Study</h2>
+                    <p>Designing a website and app to improve travel experiences. Helping people feel like locals wherever they may be.</p>
+                    <a href="./Monico Case Study.html">Read Case Study</a>
+                </div>
+            </article>
+
+            <article>
+                <div class="fadein">
+                    <a href="./Tools.html"><img src="./images/mindmap.png" alt="Image of a Mind Map tool" /></a>
+                </div>
+                <div>
+                    <h2 class="work-subheader">Favorite Tools</h2>
+                    <p>A gallery of my favorite design tools.</p>
+                    <a href="./Tools.html">See tool gallery</a>
+                </div>
+            </article>
+
+            <article>
+                <div class="fadein">
+                    <a href="./designs.html"><img src="./images/TwoDoor.png" alt="Two Door Cinema Club Landing Page" /></a>
+                </div>
+                <div>
+                    <h3 class="work-subheader">Design Odds & Ends</h3>
+                    <p>Take a peek at some design challenges I completed ranging from icons to landing pages. </p>
+                    <a href="./designs.html">See designs</a>
+                </div>
+            </article>
+
+
+        </section>
+
+        <section id="aboutMe">
+            <div>
+                <img src="./images/PXL_20210924_160927286.MP~2(1-2.jpg" alt="picture of Grace Peng" />
+            </div>
+            <div>
+                <h2>A Little Bit About Me<a href="#top" title="back to top"><i class="fa-solid fa-chevron-circle-up"></i></a></h2>
+                <p>I'm Grace, a curious UX designer in Chicago.</p>
+                <p>In my past life as a dietitian, I spent my days listening to people's stories, empathizing with them, and collaborating with them to find suitable solutions. It was during my time with the Women, Infant, and Children (WIC) program that I saw the barriers poor user design and technology created between my clients and their goals. Through User Centered Design, I am able to use my listening skills and empathy to help break that barrier down. </p>
+                <p>In my off time, you can catch me...
+                    <ul>
+                        <li>Playing Dungeons and Dragons sessions with friends <i id="aboutIcons" class="fa-solid fa-dice-d20"></i></li>
+                        <li>Weightlifting and Yoga stretching<i id="aboutIcons" class="fa-solid fa-dumbbell"></i></li>
+                        <li>Reading Brandon Sanderson Novels<i id="aboutIcons" class="fa-solid fa-book"></i></li>
+                        <li>Cuddling with my husband and dog<i id="aboutIcons" class="fa-solid fa-dog"></i></li>
+                    </ul>
+                </p>
+                
+            </div>
+        </section>
+
+        <section id="contactForm">
+            <h2>Let's Work Together<a href="#top" title="back to top"><i class="fa-solid fa-chevron-circle-up"></i></a></h2>
+            <form>
+                <div>
+                    <label>First
+                        <input type="text" value="" />
+                    </label>
+                </div>
+                <div>
+                    <label>Last
+                        <input type="text" value="" />
+                    </label>
+                </div>
+                <div>
+                    <label>Email
+                        <input type="email" value="" />
+                    </label>
+                </div>
+                <div>
+                    <label>Message
+                        <textarea></textarea>
+                    </label>
+                </div>
+                <div>
+                    <button type="submit"class="allButtons">Send Message</button>
+                </div>
+            </form>
+        </section>
+
+    </main>
+    <footer>
+        <ul>
+            <li><a href="https://dribbble.com/graceyp" title="dribbble"><i class="fa-solid fa-basketball"></i></a></li>
+            <li><a href="https://www.instagram.com/gracey_peng/" title="instagram"><i
+                        class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="https://www.pinterest.com/graluffa/" title="pinterest"><i
+                        class="fa-brands fa-pinterest"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/graceypeng/" title="linked in"><i
+                        class="fa-brands fa-linkedin"></i></a></li>
+        </ul>
+        <p>&copy; Copyright gracepeng.design</p>
+    </footer>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Back to top</button>
+
+    <script>
+
+        // in-page navigation smooth scrolling
+        (function () {
+            document.querySelectorAll('a[href^="#"]')
+                .forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        console.log("I done scrolled")
+                        document.querySelector(this.getAttribute('href')).scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    });
+                });
+        })();
+
+        //Rotating Greeting JS
+
+        var htmlElements = [
+            "<span id='change'>Oh, hello!<span/>",
+            "<i id='change' class='fa-solid fa-hand-peace'></i>",
+            "<span id='change'>Welcome.<span/>",
+            "<i id='change' class='fa-solid fa-hands-clapping'></i>",
+
+            // "<span id='change'>你好<span/>",
+        ]
+        var counter = 0;
+        setInterval(()=> {
+            let elementToChange = document.getElementById("change");
+            elementToChange.outerHTML = htmlElements[counter]
+            counter++;
+            if (counter >= htmlElements.length) {
+                counter = 0;
+                // clearInterval(inst); // uncomment this if you want to stop refreshing after one cycle
+            }
+        }, 1000)
+
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+    </script>
+</body>
+
+</html>

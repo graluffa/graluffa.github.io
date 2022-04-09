@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./images/logofavicon.png" type="image/png" />
+    <title>Grace Peng</title>
+    <script src="https://kit.fontawesome.com/1f06a40a7f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;700&family=Lora&display=swap"
+        rel="stylesheet">
+    <link href="./reset.css" rel="stylesheet" />
+    <link href="./styles.css" rel="stylesheet" />
+    <style>
+
+        body {
+            animation: fadeInAnimation ease 2s;
+            animation-iteration-count: 1;
+            animation-fill-mode: backwards;
+        }
+
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        h2 i {
+            font-size: 1.2rem;
+            color: var(--main-color);
+            margin-left: 0.5em
+        }
+
+        h6 {
+            margin-bottom: 5px;
+            font-size: 1rem;
+            line-height: 1.2rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-top: 1.3em;
+        }
+
+        .case-wrapper {
+            display: flex;
+            margin-right: 64px;
+            margin-left: 64px;
+            flex-direction: column;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: center;
+            box-sizing: border-box;
+
+        }
+
+        .studyHeader {
+            background-color: var(--main-color-faded);
+        }
+
+        .case-study-teaser-text {
+            font-size: 1.5em;
+        }
+
+        .case-study-teaser {
+            display: flex;
+            width: 100%;
+            max-width: 1112px;
+            margin-bottom: 47px;
+            justify-content: space-between;
+            align-items: flex-start;
+            text-align: left;
+            box-sizing: border-box;
+
+        }
+
+        .intro-teaser-left {
+            width: 47.6%;
+            margin-right: 13.4%;
+            box-sizing: border-box
+        }
+
+        .project-title {
+            font-size: 2.8em;
+            margin-bottom: -0.7em;
+        }
+
+        .project-description {
+            font-size: 2em;
+            margin-bottom: 0.3em;
+            color: rgb(89, 41, 113);
+        }
+
+        .facts-details {
+            margin: 0em;
+        }
+
+
+        .large-paragraph {
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+
+        .reflections-text {
+            color: rgb(89, 41, 113);
+            font-size: 0.93em;
+            line-height: 1.2;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+        }
+
+        .UCD-header {
+            margin-left: 8.3em;
+            font-weight: bolder;
+        }
+
+        ul {
+            list-style-type: square;
+        }
+
+        #research-synthesis-img {
+            margin-bottom: 8px;
+        }
+
+
+            @media screen and (min-width: 48em) {}
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="./index.html"><img id="siteLogo" src="./images/Logo.png" alt="Grace Peng, designer, logo" /></a>
+        <div>
+            <a href="./index.html">
+                <h1 id="top">Grace Peng</h1>
+            </a>
+            <nav role="navigation">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="index.html#myWork">Work</a></li>
+                    <li><a href="index.html#aboutMe">About</a></li>
+                    <li><a href="index.html#contactForm">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="studyHeader">
+        <div style="margin-top: -1.3em;">
+            <img class="MonicoImage" src="./images/monicomockup.png" alt="Monico website sign up page" />
+        </div>
+    </div>
+    <section class="case-wrapper">
+        <div class="studyContent">
+            <div id="case-study-introduction">
+                <h1 class="project-title">
+                    <strong>Where it all began</strong></h1>
+                <h2 class="project-description"><em>How do we make traveling for users a smoother journey?</em></h2>
+            </div>
+            <div class="case-study-teaser">
+                <div class="intro-teaser-left">
+                    <div class="case-study-teaser-text">
+                        <p>Our newly created mock company wants to explore peoples current travel experiences,
+                            specifically challenges they face. </p>
+                        <p>Our goal is to gather intel on how to improve their experience so they can feel like local in
+                            a foreign land.</p>
+                    </div>
+                </div>
+                <div class="case-study-teaser-right">
+                    <div class="detail-head-right">
+                        <h6>Company</h6>
+                        <p class="facts-details">Monico</p>
+                        <h6>Role</h6>
+                        <p class="facts-details">UX Designer/Product Designer</p>
+                        <h6>Tools & Methods</h6>
+                        <p class="facts-details">Affinity Diagram</p>
+                        <p class="facts-details">Competitor Analysis</p>
+                        <p class="facts-details">User Interviews & Surveys</p>
+                        <p class="facts-details">Empathy Map & Journey Map</p>
+                        <h6>Duration</h6>
+                        <p class="facts-details">Timeline: 12 weeks (ongoing)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2 class="UCD-header">The Challenge</h2>
+        <div class="text-group">
+            <p class="large-paragraph medium-spacer col-1">
+                Finally after years of pandemic, normal traveling is resuming. How does planning and actually traveling
+                go again? What events are happening in this other country and are all the stores and restaurants even
+                there anymore?
+                <br><br>That is a challenge Monico aimed to address. Following the design thinking process, we aimed to
+                develop a site and phone app that aids in planning trips or connecting with a local who can.
+            </p>
+            <p class="reflections-text col-2">
+                See my notes and reflections in these side notes over here!
+            </p>
+        </div>
+
+        <h2 class="UCD-header">Explorations & Research</h2>
+        <div class="text-group">
+            <p class="large-paragraph medium-spacer col-1">
+                We used affinity diagrams to generate open-ended research questions for user interviews. With our
+                refined list, we interviewed 5 individuals that regularly travel (pandemic aside). We asked questions
+                like: Tell me about some challenges you've experienced while traveling or planning a trip. How was
+                navigating in a foreign country? Any challenges communicating with locals? Walk me through your planning
+                process.
+                <br>
+                <br>
+                <img src="./images/monicoaffinitymap1.jpg" alt="monico affinity map" />
+                <br>
+                <strong>An initial finding from our interviews:</strong>
+                Our users like to know where locals go and what events are happening.
+                <br>
+                <br>
+                We conducted Maze surveys to collect feedback on app and website features.
+            </p>
+            <p class="reflections-text col-2">
+                Initially, we thought of creating a translation or language app, but ultimately decided to use the
+                interviews to explore the user's challenges and needs first instead of assuming what they needed.
+                <br>
+                <br>
+                Interviews were completed via telephone and Microsoft Teams video call.
+            </p>
+        </div>
+
+        <h2 class="UCD-header">Analyzing our data</h2>
+        <div class="text-group">
+            <p id="research-synthesis-img" class="large-paragraph medium-spacer col-1">
+                <img src="./images/ResearchSynthesis.png" alt="monico user interview affinity map insights" />
+                <br>
+                Returning to the affinity diagram, our team first categorized answers based on questions we asked then
+                grouped them into major topics. Using this map, we developed our key insights:
+            </p>
+            <p class="reflections-text col-2">
+                Our remote team conducted our gathering and analysis virtually via Figma & Figjam.
+            </p>
+        </div>
+
+        <div class="text-group">
+            <ul class="text-list medium-spacer col-1">
+                <li><strong>Our users want to feel safe during traveling and know their belongings are secure</strong>
+                </li>
+                <li><strong>Our users want to know where to go, what the current events are (local news/major
+                        celebrations)</strong></li>
+                <li><strong>Our users do not see language as a challenge- many find locals can speak English and will
+                        use a translator book or learn the language if needed.</strong></li>
+            </ul>
+            <p class="reflections-text col-2">
+                Our research revealed some surprising and humbling data:
+                <br>Our users did not feel the need for learning a language when traveling abroad and did not encounter
+                any challenges communicating with locals as we had originally thought.
+            </p>
+        </div>
+
+        <h2 class="UCD-header">Visualizing and understanding our users</h2>
+        <div class="text-group">
+            <p class="large-paragraph medium-spacer col-1">
+                With our extensive research completed, it was time to define who our users were. We synthesized all the
+                interview data and created a user persona.
+                <img src="./images/MonicoEmpathyMap.png" alt="image of empathy map" />
+                <img src="./images/MonicoPersonaRachel.png" alt="image of user persona" />
+            </p>
+            <p class="reflections-text col-2">
+                This persona was helpful in reminding us who we are designing for and to put our opinions aside.
+            </p>
+        </div>
+
+        <h2 class="UCD-header">Redefining and comparing</h2>
+        <div class="text-group">
+            <p class="large-paragraph medium-spacer col-1">
+                Our team needed to redefine our research question based on our findings. We determined our new goal was
+                to answer this: "How might we provide insider tips from locals to improve travel experiences for our
+                users?".
+                <br>We also conducted a competitor analysis to compare current design and content layouts of indirect
+                and direct competitors.
+                <br>
+                <br>
+                <img src="./images/competitoranalysis.png" alt="competitor analysis diagram" />
+            </p>
+            <p class="reflections-text col-2">
+                The competitor analysis helped us determine what layouts were user-friendly and what issues we should
+                avoid as we designed our website.
+            </p>
+        </div>
+
+        <h2 class="UCD-header">Brainstorming, ideating, rinse, & repeat. </h2>
+        <div class="text-group">
+            <p class="large-paragraph medium-spacer col-1">
+                Our team used some "How Might We" questions to define . This included: How might we incorporate all of
+                our users needs (safety and knowledge of events) into one cohesive service? How might we design our
+                layouts so our user can search for what they need?
+                <br>
+                <br>
+                <img src="./images/Signupwireframe.png" alt="wireframe of Monico sign up page"
+                    style="border:1px solid #3b3434" /><br>
+                <img src="./images/explorewireframe.png" alt="wireframe of Monico exploration page"
+                    style="border:1px solid #3b3434" /><br>
+                <img src="./images/planningtripswireframe.png" alt="wireframe of trip planner"
+                    style="border:1px solid #3b3434" /><br>
+            </p>
+            <p class="reflections-text col-2">
+                During the following few weeks, we used these questions to guide our wireframing and prototyping.
+            </p>
+        </div>
+    </section>
+
+    <h1 style="margin-left: 6.2em;">Still interested? Come back to see our final product.</h1>
+    <footer>
+        <ul>
+            <li><a href="https://dribbble.com/graceyp" title="dribbble"><i class="fa-solid fa-basketball"></i></a></li>
+            <li><a href="https://www.instagram.com/gracey_peng/" title="instagram"><i
+                        class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="https://www.pinterest.com/graluffa/" title="pinterest"><i
+                        class="fa-brands fa-pinterest"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/graceypeng/" title="linked in"><i
+                        class="fa-brands fa-linkedin"></i></a></li>
+        </ul>
+        <p>&copy; Copyright gracepeng.design</p>
+    </footer>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Back to top</button>
+
+    <script>
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop >20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+
+</body>
+
+</html>

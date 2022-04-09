@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./images/logofavicon.png" type="image/png" />
+    <title>Grace Peng</title>
+    <script src="https://kit.fontawesome.com/1f06a40a7f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;700&family=Lora&display=swap" rel="stylesheet"> 
+    <link href="./reset.css" rel="stylesheet" />
+    <link href="./styles.css" rel="stylesheet" />
+    <style>
+
+        body {
+            animation: fadeInAnimation ease 2s;
+            animation-iteration-count: 1;
+            animation-fill-mode: backwards;
+        }
+
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        h2 i {
+            font-size: 1.2rem;
+            color: var(--main-color);
+            margin-left: 0.5em
+        }
+
+        h6{
+            margin-bottom:5px;
+            font-size:1rem;
+            line-height:1.2rem;
+            text-transform:uppercase;
+            font-weight:bold;
+            margin-top:1.3em;
+        }
+
+        #design-challenge-gallery{
+            display:block;
+            width:100%;
+            padding-bottom: 60px;
+            position:relative;
+        }
+        .designHeader {
+            background-color: var(--main-color-faded);
+        }
+
+        #designTitle{
+            font-size: 2em;
+            text-align:center;
+            margin-top: -0.6em;
+            padding-bottom: 0.5em;
+            padding-top: 0.5em;
+        }
+
+
+        ul{
+            list-style-type: square;
+        }
+
+        img{
+            border-radius:2px;
+        }
+        /*Overlay Title Content */
+        #overlay-img {
+            width: 100%;
+            display: block;
+        }
+
+        .title {
+            background-color: rgb(0, 0, 0, 0.5);
+        /*positioned relative to parent div (container) */
+            position: absolute;    
+/* bottom margin is 0 so that it 
+coincides with container's bottom margin*/
+            bottom: 0;             
+            color: white;
+            width: 100%;
+            font-size: 25px;
+            padding: 15px 0;
+            text-align: center;
+            /*invisible because opacity is 0*/
+            opacity: 0;            
+            transition: 0.6s;
+        }
+
+        .container:hover .title {
+        /*becomes visible on hover*/ 
+            opacity: 1;          
+        }
+        
+
+        /* GALLERY CONTENT */
+        
+        .container {  
+            width: 75%;
+            margin: 3em auto;
+            padding:5px;
+        }
+
+        .outer-row-flex {
+            display: flex;
+            flex-direction: row;
+        }
+        
+        .column-left-flex {
+            max-width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .column-right-flex {
+            max-width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; 
+            
+        }
+
+        .inner-row-flex {
+            max-height:15%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between; 
+        }
+
+        .zoo img { padding-bottom: 10px; padding-right: 5px;}
+
+        .twoDoor { max-height: 30%; }
+        .twoDoor img { padding-bottom: 10px; padding-left: 5px; }
+
+        .candy { max-height: 70%; }
+        .candy { padding-left:5px;  padding-bottom:10px; }
+
+        .cosmo {  max-width: 35%; }
+        
+        .johnlegend { max-height: 100%; }
+        .johnlegend img { padding-right: 5px; padding-bottom:10px;}
+
+        .newsletter { max-height: 100%; }
+        .newsletter img { padding-right: 5px;  padding-bottom:10px; }
+
+
+
+        /* for media breakpoint below */
+        @media only screen and (max-width: 800px) {
+            .container {  
+                margin: 3em auto;
+            }
+            .outer-row-flex {
+                display: flex;
+                flex-direction: column;
+                align-items:center;
+            }
+
+            .column-left-flex {
+                max-width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            
+            }
+            .column-right-flex {
+                max-width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between; 
+                
+            }
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="./index.html"><img id="siteLogo" src="./images/Logo.png" alt="Grace Peng, designer, logo" /></a>
+        <div>
+            <a href="./index.html"><h1 id="top">Grace Peng</h1></a>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="index.html#myWork">Work</a></li>
+                    <li><a href="index.html#aboutMe">About</a></li>
+                    <li><a href="index.html#contactForm">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="designHeader">
+        <div id="designTitle">
+            <h1><strong>Design Odds & Ends</strong></h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="outer-row-flex">
+            <div class="column-left-flex">
+                <div class="zoo">
+                    <img id="overlay-img" src="./images/Zoo404Page.png" alt="zoo 404 page">
+                    <div class="title">Zoo 404 Page</div> 
+                </div>
+                <div class="inner-row-flex">
+                    <div class="cosmo">
+                        <img id="overlay-img" src="./images/Cosmeticlogowhite.png" alt="logo for cosmetics">
+                    </div>
+                    <div class="logo">
+                        <img id="overlay-img" src="./images/logicalimaginationlogo.png" alt="logo for Logical Imagination">
+                    </div>
+                </div>
+                <div class="johnlegend">
+                    <img id="overlay-img" src="./images/JohnLegendContestFormweb.png" alt="John Legend Contest Page">
+                </div>
+                <div class="newsletter">
+                    <img id="overlay-img" src="./images/Newsletter Modal.png" alt="Newsletter sign up Modal(pop up)">
+                </div>
+            </div>
+            <div class="column-right-flex">
+                <div class="twoDoor">
+                    <img id="overlay-img" src="./images/TwoDoor.png" alt="Two Door Cinema Club page">
+                </div>
+                <div class="candy">
+                    <img id="overlay-img" src="./images/candyreceipt.png" alt="candy receipt design">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+    <footer>
+        <ul>
+            <li><a href="https://dribbble.com/graceyp" title="dribbble"><i class="fa-solid fa-basketball"></i></a></li>
+            <li><a href="https://www.instagram.com/gracey_peng/" title="instagram"><i
+                        class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="https://www.pinterest.com/graluffa/" title="pinterest"><i
+                        class="fa-brands fa-pinterest"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/graceypeng/" title="linked in"><i
+                        class="fa-brands fa-linkedin"></i></a></li>
+        </ul>
+        <p>&copy; Copyright gracepeng.design</p>
+    </footer>
+    <script>
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+
+
+        // const imgContent = document.querySelectorAll('.img-content-hover');
+
+        // function showImgContent(e) {
+        // for(var i = 0; i < imgContent.length; i++) {
+        //     x = e.pageX;
+        //     y = e.pageY;
+        //     imgContent[i].style.transform = `translate3d(${x}px, ${y}px, 0)`;
+        // }
+        // };
+
+        document.addEventListener('mousemove', showImgContent);
+    </script>
+</body>
+
+</html>
