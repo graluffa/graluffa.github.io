@@ -40,6 +40,66 @@
             margin-top:3em;
             margin:3em auto;
         }
+        
+        .hover-caption {
+            position: relative;
+        }
+
+        .overlay-left {
+            position: absolute; 
+            bottom: 0; 
+            background: rgb(0, 0, 0);
+            background: rgba(0, 0, 0, 0.5);
+            color: #f1f1f1; 
+            width: 100%;
+            transition: .5s ease;
+            opacity:0;
+            color: white;
+            font-size: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .overlay-right {
+            position: absolute; 
+            bottom: 0; 
+            background: rgb(0, 0, 0);
+            background: rgba(0, 0, 0, 0.5);
+            color: #f1f1f1; 
+            width: 97%;
+            transition: .5s ease;
+            opacity:0;
+            color: white;
+            font-size: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .overlay-single {
+            position: absolute; 
+            bottom: 0; 
+            background: rgb(0, 0, 0);
+            background: rgba(0, 0, 0, 0.5);
+            color: #f1f1f1; 
+            width: 97%;
+            transition: .5s ease;
+            opacity:0;
+            color: white;
+            font-size: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .hover-caption:hover .overlay-left {
+            opacity: 1;
+        }
+        .hover-caption:hover .overlay-right {
+            opacity: 1;
+        }
+
+        .hover-caption:hover .overlay-single {
+            opacity: 1;
+        }
 
         .case-wrapper {
             display: flex;
@@ -47,11 +107,14 @@
             justify-content:space-between;
         }
 
+        .case-wrapper > div {
+            flex: 1;
+        }
+
         .case-wrapper img {
             width:100%;
-            border-radius:5px;
+            border-radius:2px;
             /* border:0.1px solid #747474; */
-            margin:5px 5px;
         }
 
         #designTitle{
@@ -118,16 +181,34 @@
     
     <div class="container">
         <div class="case-wrapper">
-            <img src="./images/AffinityDiagramHWgroup.jpg" alt="affinity diagram image 1" />
-            <img src="./images/mindmap.png" alt="404 error page for a zoo"/>
+            <div class="hover-caption">
+                <img src="./images/AffinityDiagramHWgroup.jpg" alt="affinity diagram image 1" />
+                <div class="overlay-left">Affinity Diagram. Prompt: Our class of 30 people each brainstormed questions for an interview. We then utilized the diagram to consolidate all our questions into 8-10 total questions.</div>
+            </div>
+            <div class="hover-caption" style="margin-left: 10px;">
+                <img src="./images/mindmap.png" alt="4mindmap on survey design process"/>
+                <div class="overlay-right">Using the Mindmap tool to organize my notes on the Survey Design Process.</div>
+            </div>
         </div>
+        
         <div class="case-wrapper">
-            <img src="./images/kaladinpersona.png" alt="image of Kaladin Persona"/>
-            <img src="./images/kaladinjourneymap.png" alt="image of Kaladin Journey Map"/>
+            <div class="hover-caption">
+                <img src="./images/kaladinpersona.png" alt="image of Kaladin Persona"/>
+                <div class="overlay-left">User Persona of a character (Kaladin)</div>
+            </div>
+            <div class="hover-caption" style="margin-left: 10px;">
+                <img style="max-width: 97%" src="./images/kaladinjourneymap.png" alt="image of Kaladin Journey Map"/>
+                <div class="overlay-right">Kaladin's Journey Map</div>
+            </div>
         </div>
-        <div class="case-wrapper">
+        <div class="case-wrapper hover-caption">
             <img src="./images/WurmanLATCH.png" alt="Image of Hersheys site using Wurman's LATCH"/>
+            <div class="overlay-left">Using Wurman's LATCH principles, my group of 5 designers organized Hershey's main products into 5 categories: Location, Alphabetical, Time, Categories, and Hierarchy.</div>
+        </div>
+        <div class="case-wrapper">
+
             <img src="#" alt="Information Architecturing"/>
+            <div class="overlay">To be determined</div>
         </div>
         
     </div>
@@ -146,40 +227,26 @@
     </footer>
     <script>
         //Get the button
-        var mybutton = document.getElementById("myBtn");
+        // var mybutton = document.getElementById("myBtn");
 
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function () {
-            scrollFunction()
-        };
+        // // When the user scrolls down 20px from the top of the document, show the button
+        // window.onscroll = function () {
+        //     scrollFunction()
+        // };
 
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                mybutton.style.display = "block";
-            } else {
-                mybutton.style.display = "none";
-            }
-        }
+        // function scrollFunction() {
+        //     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        //         mybutton.style.display = "block";
+        //     } else {
+        //         mybutton.style.display = "none";
+        //     }
+        // }
 
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-
-
-
-        const imgContent = document.querySelectorAll('.img-content-hover');
-
-        function showImgContent(e) {
-        for(var i = 0; i < imgContent.length; i++) {
-            x = e.pageX;
-            y = e.pageY;
-            imgContent[i].style.transform = `translate3d(${x}px, ${y}px, 0)`;
-        }
-        };
-
-        document.addEventListener('mousemove', showImgContent);
+        // // When the user clicks on the button, scroll to the top of the document
+        // function topFunction() {
+        //     document.body.scrollTop = 0;
+        //     document.documentElement.scrollTop = 0;
+        // }
 
     </script>
 </body>
