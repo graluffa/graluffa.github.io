@@ -69,34 +69,6 @@
         img{
             border-radius:2px;
         }
-        /*Overlay Title Content */
-        #overlay-img {
-            width: 100%;
-            display: block;
-        }
-
-        .title {
-            background-color: rgb(0, 0, 0, 0.5);
-        /*positioned relative to parent div (container) */
-            position: absolute;    
-/* bottom margin is 0 so that it 
-coincides with container's bottom margin*/
-            bottom: 0;             
-            color: white;
-            width: 100%;
-            font-size: 25px;
-            padding: 15px 0;
-            text-align: center;
-            /*invisible because opacity is 0*/
-            opacity: 0;            
-            transition: 0.6s;
-        }
-
-        .container:hover .title {
-        /*becomes visible on hover*/ 
-            opacity: 1;          
-        }
-        
 
         /* GALLERY CONTENT */
         
@@ -135,7 +107,6 @@ coincides with container's bottom margin*/
 
         .zoo img { padding-bottom: 10px; padding-right: 5px;}
 
-        .twoDoor { max-height: 30%; }
         .twoDoor img { padding-bottom: 10px; padding-left: 5px; }
 
         .candy { max-height: 70%; }
@@ -150,6 +121,72 @@ coincides with container's bottom margin*/
         .newsletter img { padding-right: 5px;  padding-bottom:10px; }
 
 
+        /* OVERLAY CAPTION CSS */
+
+        .hover-caption {
+            position: relative;
+        }
+
+        .overlay-twodoor {
+            position: absolute;
+            bottom: 0;
+            background: rgb(0, 0, 0);
+            background: rgba(0, 0, 0, 0.5); /* Black see-through */
+            color: #f1f1f1;
+            width: 99%;
+            transition: .5s ease;
+            opacity:0;
+            color: white;
+            font-size: 20px;
+            padding: 20px;
+            text-align: center;
+            margin-left: 5px;
+            margin-bottom: 10px;
+        }
+
+        .overlay {
+            position: absolute; 
+            bottom: 0; 
+            background: rgb(0, 0, 0);
+            background: rgba(0, 0, 0, 0.5); /* Black see-through */
+            color: #f1f1f1; 
+            width: 99%;
+            transition: .5s ease;
+            opacity:0;
+            color: white;
+            font-size: 20px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .overlay-small {
+            position: absolute; 
+            bottom: 0; 
+            background: rgb(0, 0, 0);
+            background: rgba(0, 0, 0, 0.5); /* Black see-through */
+            color: #f1f1f1; 
+            width: 99%;
+            transition: .5s ease;
+            opacity:0;
+            color: white;
+            font-size: 20px;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .hover-caption:hover .overlay {
+            opacity: 1;
+        }
+
+        .hover-caption:hover .overlay-small {
+            opacity: 1;
+        }
+
+        .hover-caption:hover .overlay-twodoor {
+            opacity: 1;
+        }
 
         /* for media breakpoint below */
         @media only screen and (max-width: 800px) {
@@ -206,31 +243,37 @@ coincides with container's bottom margin*/
     <div class="container">
         <div class="outer-row-flex">
             <div class="column-left-flex">
-                <div class="zoo">
-                    <img id="overlay-img" src="./images/Zoo404Page.png" alt="zoo 404 page">
-                    <div class="title">Zoo 404 Page</div> 
+                <div class="zoo hover-caption">
+                    <img src="./images/Zoo404Page.png" alt="zoo 404 page">
+                    <div class="overlay">Zoo 404 Page</div> 
                 </div>
                 <div class="inner-row-flex">
-                    <div class="cosmo">
-                        <img id="overlay-img" src="./images/Cosmeticlogowhite.png" alt="logo for cosmetics">
+                    <div class="cosmo hover-caption">
+                        <img src="./images/Cosmeticlogowhite.png" alt="logo for cosmetics">
+                        <div class="overlay-small">Zoo 404 Page</div> 
                     </div>
-                    <div class="logo">
-                        <img id="overlay-img" src="./images/logicalimaginationlogo.png" alt="logo for Logical Imagination">
+                    <div class="logo hover-caption">
+                        <img src="./images/logicalimaginationlogo.png" alt="logo for Logical Imagination">
+                        <div class="overlay-small">Zoo 404 Page</div> 
                     </div>
                 </div>
-                <div class="johnlegend">
-                    <img id="overlay-img" src="./images/JohnLegendContestFormweb.png" alt="John Legend Contest Page">
+                <div class="johnlegend hover-caption">
+                    <img src="./images/JohnLegendContestFormweb.png" alt="John Legend Contest Page">
+                    <div class="overlay">Zoo 404 Page</div> 
                 </div>
-                <div class="newsletter">
-                    <img id="overlay-img" src="./images/Newsletter Modal.png" alt="Newsletter sign up Modal(pop up)">
+                <div class="newsletter hover-caption">
+                    <img src="./images/Newsletter Modal.png" alt="Newsletter sign up Modal(pop up)">
+                    <div class="overlay">Zoo 404 Page</div> 
                 </div>
             </div>
             <div class="column-right-flex">
-                <div class="twoDoor">
-                    <img id="overlay-img" src="./images/TwoDoor.png" alt="Two Door Cinema Club page">
+                <div class="twoDoor hover-caption">
+                    <img src="./images/TwoDoor.png" alt="Two Door Cinema Club page">
+                    <div class="overlay-twodoor">Zoo 404 Page</div> 
                 </div>
-                <div class="candy">
-                    <img id="overlay-img" src="./images/candyreceipt.png" alt="candy receipt design">
+                <div class="candy hover-caption">
+                    <img src="./images/candyreceipt.png" alt="candy receipt design">
+                    <div class="overlay">Zoo 404 Page</div> 
                 </div>
             </div>
         </div>
@@ -251,40 +294,27 @@ coincides with container's bottom margin*/
     </footer>
     <script>
         //Get the button
-        var mybutton = document.getElementById("myBtn");
+        // var mybutton = document.getElementById("myBtn");
 
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function () {
-            scrollFunction()
-        };
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                mybutton.style.display = "block";
-            } else {
-                mybutton.style.display = "none";
-            }
-        }
-
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-
-
-
-        // const imgContent = document.querySelectorAll('.img-content-hover');
-
-        // function showImgContent(e) {
-        // for(var i = 0; i < imgContent.length; i++) {
-        //     x = e.pageX;
-        //     y = e.pageY;
-        //     imgContent[i].style.transform = `translate3d(${x}px, ${y}px, 0)`;
-        // }
+        // // When the user scrolls down 20px from the top of the document, show the button
+        // window.onscroll = function () {
+        //     scrollFunction()
         // };
 
-        document.addEventListener('mousemove', showImgContent);
+        // function scrollFunction() {
+        //     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        //         mybutton.style.display = "block";
+        //     } else {
+        //         mybutton.style.display = "none";
+        //     }
+        // }
+
+        // // When the user clicks on the button, scroll to the top of the document
+        // function topFunction() {
+        //     document.body.scrollTop = 0;
+        //     document.documentElement.scrollTop = 0;
+        // }
+
     </script>
 </body>
 
