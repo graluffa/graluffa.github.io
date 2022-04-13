@@ -117,6 +117,14 @@
             /* border:0.1px solid #747474; */
         }
 
+        .margin-left {
+            margin-left: 24px;
+        }
+
+        .margin-top {
+            margin-top: 24px;
+        }
+
         #designTitle{
             font-size: 2em;
             text-align:center;
@@ -154,6 +162,44 @@
 
         /* for media breakpoint below */
         @media screen and (min-width: 48em) {}
+
+        /* for media breakpoint below */
+        @media only screen and (max-width: 800px) {
+            .case-wrapper {  
+                display: flex;
+                flex-direction: column;
+                align-items:center;
+            }
+
+            .margin-left {
+                margin-left: 0px;
+            }
+
+            .margin-top {
+                margin-top: 0px;
+            }
+
+            .mobile-margin-spacing {
+                margin-top: 24px;
+            }
+
+            .navigation-mobile {
+                top: 0px;
+                margin-top: 0px;
+                display: flex;
+                flex-direction: row;
+                padding: 0;
+                width: 100%;
+                height: auto;
+                justify-content: center;
+                overflow: scroll;
+                position: fixed;
+                text-align: left;
+                z-index: 100;
+                background: #3cb8b4;
+                margin-bottom: 0;
+            }
+        }
  
 
     </style>
@@ -195,23 +241,23 @@
                 <img src="./images/AffinityDiagramHWgroup.jpg" alt="affinity diagram image 1" />
                 <div class="overlay-left">Affinity Diagram. Prompt: Our class of 30 people each brainstormed questions for an interview. We then utilized the diagram to consolidate all our questions into 8-10 total questions.</div>
             </div>
-            <div class="hover-caption" style="margin-left: 10px;">
-                <img src="./images/mindmap.png" alt="4mindmap on survey design process"/>
+            <div class="hover-caption margin-left mobile-margin-spacing">
+                <img src="./images/mindmap.png" alt="4mindmap on survey design process" style="height: 100%; object-fit: cover;"/>
                 <div class="overlay-right">Using the Mindmap tool to organize my notes on the Survey Design Process.</div>
             </div>
         </div>
         
-        <div class="case-wrapper">
+        <div class="case-wrapper margin-top mobile-margin-spacing">
             <div class="hover-caption">
-                <img src="./images/kaladinpersona.png" alt="image of Kaladin Persona"/>
+                <img src="./images/kaladinpersona.png" alt="image of Kaladin Persona" style="height: 100%; object-fit: cover"/>
                 <div class="overlay-left">User Persona of a character (Kaladin)</div>
             </div>
-            <div class="hover-caption" style="margin-left: 10px;">
-                <img style="max-width: 97%" src="./images/kaladinjourneymap.png" alt="image of Kaladin Journey Map"/>
+            <div class="hover-caption margin-left mobile-margin-spacing">
+                <img src="./images/kaladinjourneymap.png" alt="image of Kaladin Journey Map"/>
                 <div class="overlay-right">Kaladin's Journey Map</div>
             </div>
         </div>
-        <div class="case-wrapper hover-caption">
+        <div class="case-wrapper hover-caption margin-top mobile-margin-spacing">
             <img src="./images/WurmanLATCH.png" alt="Image of Hersheys site using Wurman's LATCH"/>
             <div class="overlay-left">Using Wurman's LATCH principles, my group of 5 designers organized Hershey's main products into 5 categories: Location, Alphabetical, Time, Categories, and Hierarchy.</div>
         </div>
