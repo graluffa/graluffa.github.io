@@ -153,6 +153,10 @@
             margin-right: auto;
         }
 
+        .navigation-mobile {
+                display: none;
+        }
+
         @media screen and (min-width: 48em) {
             #hello {
                 display: flex;
@@ -227,12 +231,20 @@
 </head>
 
 <body>
+    <nav>
+        <ul class="navigation-mobile">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="index.html#myWork">Work</a></li>
+            <li><a href="index.html#aboutMe">About</a></li>
+            <li><a href="index.html#contactForm">Contact</a></li>
+        </ul>
+    </nav>
     <header>
         <a href="./index.html"><img id="siteLogo" src="./images/Logo.png" alt="Grace Peng, designer, logo" /></a>
         <div>
             <a href="./index.html"><h1 id="top">Grace Peng</h1></a>
             <nav>
-                <ul>
+                <ul class="navigation">
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="#myWork">Work</a></li>
                     <li><a href="#aboutMe">About</a></li>
@@ -303,7 +315,7 @@
                 <p>In my past life as a dietitian, I spent my days listening to people's stories, empathizing with them, and collaborating with them to find suitable solutions. It was during my time with the Women, Infant, and Children (WIC) program that I saw the barriers poor user design and technology created between my clients and their goals. Through User Centered Design, I am able to use my listening skills and empathy to help break that barrier down. </p>
                 <p>In my off time, you can catch me...
                     <ul>
-                        <li>Playing Dungeons and Dragons sessions with friends <i id="aboutIcons" class="fa-solid fa-dice-d20"></i></li>
+                        <li>Playing Dungeons and Dragons with friends <i id="aboutIcons" class="fa-solid fa-dice-d20"></i></li>
                         <li>Weightlifting and Yoga stretching<i id="aboutIcons" class="fa-solid fa-dumbbell"></i></li>
                         <li>Reading Brandon Sanderson Novels<i id="aboutIcons" class="fa-solid fa-book"></i></li>
                         <li>Cuddling with my husband and dog<i id="aboutIcons" class="fa-solid fa-dog"></i></li>

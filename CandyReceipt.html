@@ -61,6 +61,16 @@
             padding-top: 0.5em;
         }
 
+        .goBack{
+            display: inline-block;
+            margin-left: 3em;
+            margin-top:2em;
+        }
+        
+        .fa-solid{
+            margin-right:0.5em;
+        }
+
         #myBtn {
             display: none;
             position: fixed;
@@ -84,7 +94,9 @@
         ul{
             list-style-type: square;}
         
-
+        .navigation-mobile {
+                display: none;
+        }
 
         /* for media breakpoint below */
         @media screen and (min-width: 48em) {}
@@ -94,6 +106,14 @@
 </head>
 
 <body>
+    <nav>
+        <ul class="navigation-mobile">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="index.html#myWork">Work</a></li>
+            <li><a href="index.html#aboutMe">About</a></li>
+            <li><a href="index.html#contactForm">Contact</a></li>
+        </ul>
+    </nav>
     <header>
         <a href="./index.html"><img id="siteLogo" src="./images/Logo.png" alt="Grace Peng, designer, logo" /></a>
         <div>
@@ -116,6 +136,8 @@
         </div>
     </div>
     
+    <a href="./designs.html" class="goBack"><i class="fa-solid fa-circle-chevron-left"></i>Back to gallery</a>
+
     <div class="container">
         <div class="Blurb">
             <h2>What was the prompt?</h2>

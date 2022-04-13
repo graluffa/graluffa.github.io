@@ -205,6 +205,10 @@ button[type=submit] {
     margin-bottom:32px;
 }
 
+.navigation-mobile {
+    display: none;
+}
+
 #myBtn {
     display: none;
     position: fixed;
@@ -255,5 +259,46 @@ button[type=submit] {
         max-width: 150px;
         margin-left: auto;
         margin-bottom: 1em;
+    }
+}
+
+@media screen and (max-width: 800px){
+    body > header div ul {
+        max-width: 100%;
+    }
+    .navigation {
+        display: none;
+    }
+    nav {
+        padding-top:50px;
+    }
+
+    .navigation-mobile {
+        top: 0px;
+        margin-top: 0px;
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        overflow: scroll;
+        position: fixed;
+        text-align: left;
+        z-index: 100;
+        background: #3cb8b4;
+        margin-bottom: 0;
+    }
+
+    .navigation-mobile > li {
+        list-style: none;
+    }
+
+    .navigation-mobile li {
+        padding: 16px 24px;
+    }
+
+    .navigation-mobile li a {
+        color: #fff;
     }
 }

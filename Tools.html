@@ -148,7 +148,9 @@
         ul{
             list-style-type: square;}
         
-
+            .navigation-mobile {
+                display: none;
+        }
 
         /* for media breakpoint below */
         @media screen and (min-width: 48em) {}
@@ -158,12 +160,20 @@
 </head>
 
 <body>
+    <nav>
+        <ul class="navigation-mobile">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="index.html#myWork">Work</a></li>
+            <li><a href="index.html#aboutMe">About</a></li>
+            <li><a href="index.html#contactForm">Contact</a></li>
+        </ul>
+    </nav>
     <header>
         <a href="./index.html"><img id="siteLogo" src="./images/Logo.png" alt="Grace Peng, designer, logo" /></a>
         <div>
             <a href="./index.html"><h1 id="top">Grace Peng</h1></a>
             <nav>
-                <ul>
+                <ul class="navigation">
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="index.html#myWork">Work</a></li>
                     <li><a href="index.html#aboutMe">About</a></li>
