@@ -48,7 +48,7 @@
         }
 
         .case-wrapper img {
-            width:100%;
+            width:50%;
             border-radius:2px;
             border:0.25px solid #1B1A19;
         }
@@ -100,6 +100,43 @@
 
         /* for media breakpoint below */
         @media screen and (min-width: 48em) {}
+
+        @media only screen and (max-width: 800px) {
+            .case-wrapper {  
+                display: flex;
+                flex-direction: column;
+                align-items:center;
+            }
+
+            .margin-left {
+                margin-left: 0px;
+            }
+
+            .margin-top {
+                margin-top: 0px;
+            }
+
+            .mobile-margin-spacing {
+                margin-top: 24px;
+            }
+
+            .navigation-mobile {
+                top: 0px;
+                margin-top: 0px;
+                display: flex;
+                flex-direction: row;
+                padding: 0;
+                width: 100%;
+                height: auto;
+                justify-content: center;
+                overflow: scroll;
+                position: fixed;
+                text-align: left;
+                z-index: 100;
+                background: #3cb8b4;
+                margin-bottom: 0;
+            }
+        }
  
 
     </style>

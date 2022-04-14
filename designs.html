@@ -76,149 +76,133 @@
             padding:5px;
         }
 
-        .outer-row-flex {
-            display: flex;
-            flex-direction: row;
-        }
-        
-        .column-left-flex {
-            max-width: 50%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        
-        .column-right-flex {
-            max-width: 50%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between; 
-            
-        }
-
-        .inner-row-flex {
-            max-height:15%;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between; 
-        }
-
-        .zoo img { padding-bottom: 10px; padding-right: 5px;}
-
-        .twoDoor img { padding-bottom: 10px; padding-left: 5px; }
-
-        .candy { max-height: 70%; }
-        .candy { padding-left:5px;  padding-bottom:10px; }
-
-        .cosmo {  max-width: 35%; }
-        
-        .johnlegend { max-height: 100%; }
-        .johnlegend img { padding-right: 5px; padding-bottom:10px;}
-
-        .newsletter { max-height: 100%; }
-        .newsletter img { padding-right: 5px;  padding-bottom:10px; }
-
         img{
             border-radius:2px;
         }
 
-        /* OVERLAY CAPTION CSS */
+        .navigation-mobile {
+            display: none;
+        }
 
-        .hover-caption {
+        figure {
+            max-width: 100%;
+            text-align: center;
             position: relative;
         }
 
-        .overlay-twodoor {
+        /* OVERLAY */
+
+        figure:hover .gallery__img{
+            background-color: white;
+            transition: all 400ms ease;
+            filter: brightness(0.6);
+        }
+
+        figure:hover .title{
+            opacity: 1;
+        }
+
+        figure .title {
+            opacity: 0;
+            transition: opacity 400ms ease;
+        }
+
+        figure a {
+            color: white;
+            font-weight: bold;
+        }
+
+        figure a:hover {
+            color: white;
+            font-weight: bold;
+        }
+
+        .title {
+            padding: var(--space);
+            font-size: 2em;
+            font-family: var(--font-secondary);
+            line-height: 1.2;
             position: absolute;
-            bottom: 0;
-            background: rgb(0, 0, 0);
-            background: rgba(0, 0, 0, 0.5); /* Black see-through */
-            color: #f1f1f1;
-            width: 99%;
-            transition: .5s ease;
-            opacity:0;
-            color: white;
-            font-size: 20px;
-            padding: 20px;
-            text-align: center;
-            margin-left: 5px;
-            margin-bottom: 10px;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
 
-        .overlay {
-            position: absolute; 
-            bottom: 0; 
-            background: rgb(0, 0, 0);
-            background: rgba(0, 0, 0, 0.5); /* Black see-through */
-            color: #f1f1f1; 
-            width: 99%;
-            transition: .5s ease;
-            opacity:0;
-            color: white;
-            font-size: 20px;
-            padding: 20px;
-            text-align: center;
-            margin-bottom: 10px;
+        /* CSS GRID */
+
+        .gallery__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 200ms ease-out;
         }
 
-        .overlay-small {
-            position: absolute; 
-            bottom: 0; 
-            background: rgb(0, 0, 0);
-            background: rgba(0, 0, 0, 0.5); /* Black see-through */
-            color: #f1f1f1; 
-            width: 99%;
-            transition: .5s ease;
-            opacity:0;
-            color: white;
-            font-size: 20px;
-            padding: 10px;
-            text-align: center;
-            margin-bottom: 10px;
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(6, auto);
+            grid-template-rows: repeat(6, auto);
+            grid-gap: 25px; 
         }
 
-        .hover-caption:hover .overlay {
-            opacity: 1;
+        .gallery__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block; 
         }
 
-        .hover-caption:hover .overlay-small {
-            opacity: 1;
+        .gallery__item--1 {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 2;
         }
 
-        .hover-caption:hover .overlay-twodoor {
-            opacity: 1;
+        .gallery__item--2 {
+            grid-column-start: 4;
+            grid-column-end: 7;
+            grid-row-start: 1;
+            grid-row-end: 2;
         }
 
-        .navigation-mobile {
-                display: none;
+        .gallery__item--3 {
+            grid-column-start: 1;
+            grid-column-end: 1;
+            grid-row-start: 2;
+            grid-row-end: 2;
         }
+
+        .gallery__item--4 {
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 2;
+        }
+
+        .gallery__item--5 {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 3;
+            grid-row-end: 4;
+        }
+
+        .gallery__item--6 {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 4;
+            grid-row-end: 6;
+        }
+
+        .gallery__item--7 {
+            grid-column-start: 4;
+            grid-column-end: 7;
+            grid-row-start: 2;
+            grid-row-end: 6;
+        }
+
 
         /* for media breakpoint below */
         @media only screen and (max-width: 800px) {
-            .container {  
-                margin: 3em auto;
-            }
-            .outer-row-flex {
-                display: flex;
-                flex-direction: column;
-                align-items:center;
-            }
-
-            .column-left-flex {
-                max-width: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-            
-            }
-            .column-right-flex {
-                max-width: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between; 
-                
-            }
-
             .navigation-mobile {
                 top: 0px;
                 margin-top: 0px;
@@ -268,43 +252,54 @@
             <h1><strong>Design Odds & Ends</strong></h1>
         </div>
     </div>
+
     <div class="container">
-        <div class="outer-row-flex">
-            <div class="column-left-flex">
-                <div class="zoo hover-caption">
-                    <a href="zoo404.html"><img src="./images/Zoo404Page.png" alt="zoo 404 page"/></a>
-                    <div class="overlay">Zoo 404 Error Page</div> 
-                </div>
-                <div class="inner-row-flex">
-                    <div class="cosmo hover-caption">
-                        <a href="CosmeticLogo.html"><img src="./images/Cosmeticlogowhite.png" alt="logo for cosmetics"/></a>
-                        <div class="overlay-small">Cosmetics Logo Design</div> 
-                    </div>
-                    <div class="logo hover-caption">
-                        <a href="LogicalLogo.html"><img src="./images/logicalimaginationlogo.png" alt="logo for Logical Imagination"/></a>
-                        <div class="overlay-small">Logical Imagination Logo Design</div> 
-                    </div>
-                </div>
-                <div class="johnlegend hover-caption">
-                    <a href="johnlegendsignup.html"><img src="./images/JohnLegendContestFormweb.png" alt="John Legend Contest Page"/></a>
-                    <div class="overlay">John Legend Breakfast Contest Sign Up Form</div> 
-                </div>
-                <div class="newsletter hover-caption">
-                    <a href="newslettermodal.html"><img src="./images/Newsletter Modal.png" alt="Newsletter sign up Modal(pop up)"/></a>
-                    <div class="overlay">Newsletter Sign Up Modal</div> 
-                </div>
-            </div>
-            <div class="column-right-flex">
-                <div class="twoDoor hover-caption">
-                    <a href="TDCC.html"><img src="./images/TwoDoor.png" alt="Two Door Cinema Club page"/></a>
-                    <div class="overlay-twodoor">Music Band Landing Page</div> 
-                </div>
-                <div class="candy hover-caption">
-                    <a href="./CandyReceipt.html"><img src="./images/candyreceipt.png" alt="candy receipt design"/></a>
-                    <div class="overlay">Candy Shop Store Receipt</div> 
-                </div>
-            </div>
+        <div class="gallery">
+                
+            <figure class="gallery__item gallery__item--1">
+                <a href="zoo404.html">
+                    <img class="gallery__img" src="./images/Zoo404Page.png" alt="zoo 404 page"/>
+                    <p class="title">Zoo 404 Error Page</p> 
+                </a>
+            </figure>
+            <figure class="gallery__item gallery__item--2">
+                <a href="TDCC.html">
+                    <img class="gallery__img" src="./images/TwoDoor.png" alt="Two Door Cinema Club page"/>
+                    <p class="title">Music Band Landing Page</p> 
+                </a>
+            </figure>
+            <figure class="gallery__item gallery__item--3">
+                <a href="CosmeticLogo.html">
+                    <img class="gallery__img" src="./images/Cosmeticlogowhite.png" alt="logo for cosmetics"/>
+                    <p class="title">Cosmetics Logo Design</p> 
+                </a>
+            </figure>
+            <figure class="gallery__item gallery__item--4">
+                <a href="LogicalLogo.html">
+                    <img class="gallery__img" src="./images/logicalimaginationlogo.png" alt="logo for Logical Imagination"/>
+                    <p class="title">Logical Imagination Logo Design</p> 
+                </a>
+            </figure>
+            <figure class="gallery__item gallery__item--5">
+                <a href="johnlegendsignup.html">
+                    <img class="gallery__img" src="./images/JohnLegendContestFormweb.png" alt="John Legend Contest Page"/>
+                    <p class="title">John Legend Breakfast Contest Sign Up Form</p> 
+                </a>
+            </figure>
+            <figure class="gallery__item gallery__item--6">
+                <a href="newslettermodal.html">
+                    <img class="gallery__img" src="./images/Newsletter Modal.png" alt="Newsletter sign up Modal(pop up)"/>
+                    <p class="title">Newsletter Sign Up Modal</p> 
+                </a>
+            </figure>
+            <figure class="gallery__item gallery__item--7">
+                <a href="./CandyReceipt.html">
+                    <img class="gallery__img" src="./images/candyreceipt.png" alt="candy receipt design"/>
+                    <p class="title">Candy Shop Store Receipt</p> 
+                </a>
+            </figure>
         </div>
+
     </div>
 
 </body>
