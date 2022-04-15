@@ -61,6 +61,7 @@
 
         }
 
+
         .allButtons:hover{
             transform: scale(1.1);
             transition: all 0.2s ease-in-out;
@@ -76,18 +77,18 @@
 
         #viewWorkButton {
             background: var(--main-color-faded);
-            color: #000;
+            color: rgb(22, 21, 21);
         }
 
         #viewWorkButton:after {
             content: ">";
             display: inline-block;
-            color: #000;
+            color: rgb(22, 21, 21);
             margin-left: 0.5em;
         }
 
         #contactButton {
-            color: #000;
+            color: rgb(22, 21, 21);
         }
 
 
@@ -227,6 +228,45 @@
                 padding-left: 3em;
             }
         }
+
+        @media screen and (max-width: 800px){
+            .navigation {
+                display: none;
+            }
+            nav {
+                padding-top:50px;
+            }
+
+            .navigation-mobile {
+                top: 0px;
+                margin-top: 0px;
+                display: flex;
+                flex-direction: row;
+                padding: 0;
+                width: 100%;
+                height: auto;
+                justify-content: center;
+                overflow: scroll;
+                position: fixed;
+                text-align: left;
+                z-index: 100;
+                background: #3cb8b4;
+                margin-bottom: 0;
+            }
+
+            .navigation-mobile > li {
+                list-style: none;
+            }
+
+            .navigation-mobile li {
+                padding: 16px 24px;
+            }
+
+            .navigation-mobile li a {
+                color: #fff;
+            }
+        }
+
     </style>
 </head>
 
@@ -256,8 +296,7 @@
     <main>
         <section id="hello">
             <div class="mbot">
-                <p id="intro"><i id="change" class="fa-solid fa-hands-clapping"></i>
-                    <br/> I'm Grace, a curious UX Designer in Windy City Chicago. </br>I love hearing people's stories and weaving them throughout the production process.</i></p>
+                <p> Hi there. <br/> I'm Grace, a curious UX Designer in Windy City Chicago. </br>I love hearing people's stories and weaving them throughout the production process.</p>
                 <div>
                     <a href="#myWork" id="viewWorkButton" class="allButtons">See My Work</a>
                     <a href="#contactForm" id="contactButton" class="allButtons">Get in touch</a>
@@ -278,6 +317,17 @@
                     <h2 class="work-subheader">Monico Case Study</h2>
                     <p>Designing a website and app to improve travel experiences. Helping people feel like locals wherever they may be.</p>
                     <a href="./Monico Case Study.html">Read Case Study</a>
+                </div>
+            </article>
+
+            <article>
+                <div class="fadein">
+                    <a href="#"><img src="./images/carloanapp.png" alt="car loan application mockup" /></a>
+                </div>
+                <div>
+                    <h2 class="work-subheader">Auto Loan Design Solution</h2>
+                    <p>Making an auto loan application mobile-friendly.</p>
+                    <a href="#">See my solution</a>
                 </div>
             </article>
 
@@ -388,26 +438,6 @@
                 });
         })();
 
-        //Rotating Greeting JS
-
-        var htmlElements = [
-            "<span id='change'>Oh, hello!<span/>",
-            "<i id='change' class='fa-solid fa-hand-peace'></i>",
-            "<span id='change'>Welcome.<span/>",
-            "<i id='change' class='fa-solid fa-hands-clapping'></i>",
-
-            // "<span id='change'>你好<span/>",
-        ]
-        var counter = 0;
-        setInterval(()=> {
-            let elementToChange = document.getElementById("change");
-            elementToChange.outerHTML = htmlElements[counter]
-            counter++;
-            if (counter >= htmlElements.length) {
-                counter = 0;
-                // clearInterval(inst); // uncomment this if you want to stop refreshing after one cycle
-            }
-        }, 1000)
 
         //Get the button
         var mybutton = document.getElementById("myBtn");

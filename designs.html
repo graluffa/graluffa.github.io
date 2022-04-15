@@ -128,6 +128,26 @@
             transform: translate(-50%, -50%);
         }
 
+        figure:hover .title-small{
+            opacity: 1;
+        }
+
+        figure .title-small {
+            opacity: 0;
+            transition: opacity 400ms ease;
+        }
+
+        .title-small {
+            padding: var(--space);
+            font-size: 2em;
+            font-family: var(--font-secondary);
+            line-height: 1.2;
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -70%);
+        }
+
         /* CSS GRID */
 
         .gallery__img {
@@ -184,7 +204,7 @@
             grid-column-end: 4;
             grid-row-start: 3;
             grid-row-end: 4;
-        }
+        }   
 
         .gallery__item--6 {
             grid-column-start: 1;
@@ -271,13 +291,13 @@
             <figure class="gallery__item gallery__item--3">
                 <a href="CosmeticLogo.html">
                     <img class="gallery__img" src="./images/Cosmeticlogowhite.png" alt="logo for cosmetics"/>
-                    <p class="title">Cosmetics Logo Design</p> 
+                    <p class="title-small">Cosmetics Logo Design</p> 
                 </a>
             </figure>
             <figure class="gallery__item gallery__item--4">
                 <a href="LogicalLogo.html">
                     <img class="gallery__img" src="./images/logicalimaginationlogo.png" alt="logo for Logical Imagination"/>
-                    <p class="title">Logical Imagination Logo Design</p> 
+                    <p class="title-small">Logical Imagination Logo Design</p> 
                 </a>
             </figure>
             <figure class="gallery__item gallery__item--5">

@@ -117,6 +117,50 @@
             font-size:1.8em;
         }
 
+        .gallery-monico{
+            display:grid;
+            grid-template-columns: repeat(4,auto);
+            grid-template-rows:repeat(4,auto);
+            grid-gap:25px;
+            box-sizing:content-box;
+            margin-right:14em;
+        }
+
+        .gallery_img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block; 
+        }
+        
+        .gallery_item--1 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+
+        .gallery_item--2 {
+            grid-column-start: 3;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+
+        .gallery_item--3 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start:3 ;
+            grid-row-end: 5;
+        }
+
+        .gallery_item--4 {
+            grid-column-start: 3;
+            grid-column-end: 5;
+            grid-row-start: 3;
+            grid-row-end: 5;
+        }
+
         ul {
             list-style-type: square;
         }
@@ -183,6 +227,12 @@
                 width:100%;
                 display: flex;
                 flex-direction: column-reverse;
+            }
+
+            .gallery-monico{
+                max-width:100%;
+                display:block;
+                margin-right:0;
             }
 
             body > header div {
@@ -383,23 +433,42 @@
                     our users needs (safety and knowledge of events) into one cohesive service? How might we design our
                     layouts so our user can search for what they need?
                     <br>
-                    <br>
-                    <img src="./images/Signupwireframe.png" alt="wireframe of Monico sign up page"
-                        style="border:1px solid #3b3434" /><br>
-                    <img src="./images/explorewireframe.png" alt="wireframe of Monico exploration page"
-                        style="border:1px solid #3b3434" /><br>
-                    <img src="./images/planningtripswireframe.png" alt="wireframe of trip planner"
-                        style="border:1px solid #3b3434" /><br>
                 </p>
                 <p class="reflections-text col-2">
                     During the following few weeks, we used these questions to guide our wireframing and prototyping.
                 </p>
             </div>
         </div>
+
+        <div class="gallery-monico col-1">
+            <figure class="gallery_item--1">
+            <img class="gallery_img" src="./images/Signupwireframe.png" alt="wireframe of Monico sign up page" style="border:1px solid #3b3434"/>
+            </figure>
+            <figure class="gallery_item--2">    
+            <img class="gallery_img" src="./images/explorewireframe.png" alt="wireframe of plan page" style="border:1px solid #3b3434" />
+            </figure>
+            <figure class="gallery_item--3">
+            <img class="gallery_img" src="./images/planningtripswireframe.png" alt="wireframe of trip planner" style="border:1px solid #3b3434" />
+            </figure>
+            <figure class="gallery_item--4">
+            <img class="gallery_img" src="./images/paymentwireframe.png" alt="wireframe of payment page" style="border:1px solid #3b3434"/>
+            </figure>
+        </div>
+        <br>
         <div>
-            <h2 class="UCD-header">Still interested? Come back to see our final product.</h2>
+            <h2 class="UCD-header">Designing and testing to come! </h2>
+            <div class="text-group">
+                <p class="large-paragraph medium-spacer col-1">
+                    Come back in May to see our final results. We are currently in the process of finalizing our product and testing it with our users.
+                </p>
+                <p class="reflections-text col-2">
+                    Thank you for your patience.
+                </p>
+            </div>
         </div>
     </section>
+
+    
 
     <footer>
         <ul>
