@@ -28,101 +28,8 @@
             margin-top:1.3em;
         }
 
-
         .designHeader {
             background-color: var(--main-color-faded);
-        }
-
-        .container{
-            width:75%;
-            margin-left:auto;
-            margin-right:auto;
-            margin-top:3em;
-            margin:3em auto;
-        }
-        
-        .hover-caption {
-            position: relative;
-        }
-
-        .overlay-left {
-            position: absolute; 
-            bottom: 0; 
-            background: rgb(0, 0, 0);
-            background: rgba(0, 0, 0, 0.5);
-            color: #f1f1f1; 
-            width: 100%;
-            transition: .5s ease;
-            opacity:0;
-            color: white;
-            font-size: 20px;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .overlay-right {
-            position: absolute; 
-            bottom: 0; 
-            background: rgb(0, 0, 0);
-            background: rgba(0, 0, 0, 0.5);
-            color: #f1f1f1; 
-            width: 97%;
-            transition: .5s ease;
-            opacity:0;
-            color: white;
-            font-size: 20px;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .overlay-single {
-            position: absolute; 
-            bottom: 0; 
-            background: rgb(0, 0, 0);
-            background: rgba(0, 0, 0, 0.5);
-            color: #f1f1f1; 
-            width: 97%;
-            transition: .5s ease;
-            opacity:0;
-            color: white;
-            font-size: 20px;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .hover-caption:hover .overlay-left {
-            opacity: 1;
-        }
-        .hover-caption:hover .overlay-right {
-            opacity: 1;
-        }
-
-        .hover-caption:hover .overlay-single {
-            opacity: 1;
-        }
-
-        .case-wrapper {
-            display: flex;
-            flex-direction:row;
-            justify-content:space-between;
-        }
-
-        .case-wrapper > div {
-            flex: 1;
-        }
-
-        .case-wrapper img {
-            width:100%;
-            border-radius:2px;
-            /* border:0.1px solid #747474; */
-        }
-
-        .margin-left {
-            margin-left: 24px;
-        }
-
-        .margin-top {
-            margin-top: 24px;
         }
 
         #designTitle{
@@ -132,56 +39,134 @@
             padding-bottom: 0.5em;
             padding-top: 0.5em;
         }
-
-        #myBtn {
-            display: none;
-            position: fixed;
-            bottom: 20px;
-            right: 30px;
-            z-index: 99;
-            font-size: 18px;
-            border: none;
-            outline: none;
-            background-color: var(--main-color);
-            color: var(--main-text-color);
-            cursor: pointer;
-            padding: 15px;
-            border-radius: 4px;
-        }
-
-        #myBtn:hover {
-            background-color: var(--alt-color);
-        }
-
-        ul{
-            list-style-type: square;}
         
-            .navigation-mobile {
-                display: none;
+        ul{
+            list-style-type: square;
         }
+        
+        .navigation-mobile {
+            display: none;
+        }
+        
+        /* GALLERY CONTENT */
+        .container{
+            width:75%;
+            margin-left:auto;
+            margin-right:auto;
+            margin-top:3em;
+            margin:3em auto;
+        }
+
+        figure {
+            max-width: 100%;
+            text-align: center;
+            position: relative;
+        }
+
+        /* OVERLAY */
+
+        figure:hover .gallery__img{
+            background-color: white;
+            transition: all 400ms ease;
+            filter: brightness(0.6);
+        }
+
+        figure:hover .title{
+            opacity: 1;
+        }
+
+        figure .title {
+            color: white;
+            opacity: 0;
+            transition: opacity 400ms ease;
+        }
+
+        .title {
+            padding: var(--space);
+            font-size: 1.1em;
+            font-family: var(--font-secondary);
+            line-height: 1.2;
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* CSS GRID */
+
+        .gallery__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 200ms ease-out;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(6, auto);
+            grid-template-rows: repeat(6, auto);
+            grid-gap: 25px; 
+        }
+
+        .gallery__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block; 
+        }
+
+        .gallery__item--1 {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+
+        .gallery__item--2 {
+            grid-column-start: 4;
+            grid-column-end: 7;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+
+        .gallery__item--3 {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 2;
+        }
+
+        .gallery__item--4 {
+            grid-column-start: 4;
+            grid-column-end: 7;
+            grid-row-start: 2;
+            grid-row-end: 2;
+        }
+
+        .gallery__item--5 {
+            grid-column-start: 1;
+            grid-column-end: 7;
+            grid-row-start: 3;
+            grid-row-end: 4;
+        }   
+
+
 
         /* for media breakpoint below */
         @media screen and (min-width: 48em) {}
 
         /* for media breakpoint below */
         @media only screen and (max-width: 800px) {
-            .case-wrapper {  
-                display: flex;
-                flex-direction: column;
-                align-items:center;
+            .gallery {
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr;
             }
 
-            .margin-left {
-                margin-left: 0px;
+            .gallery__item--1, .gallery__item--2, .gallery__item--3, .gallery__item--4, .gallery__item--5, .gallery__item--6, .gallery__item--7 {
+                grid-column: auto;
+                grid-row: auto;
             }
 
-            .margin-top {
-                margin-top: 0px;
-            }
-
-            .mobile-margin-spacing {
-                margin-top: 24px;
-            }
 
             .navigation-mobile {
                 top: 0px;
@@ -200,7 +185,7 @@
                 margin-bottom: 0;
             }
         }
- 
+
 
     </style>
 </head>
@@ -236,33 +221,31 @@
     </div>
     
     <div class="container">
-        <div class="case-wrapper">
-            <div class="hover-caption">
-                <img src="./images/AffinityDiagramHWgroup.jpg" alt="affinity diagram image 1" />
-                <div class="overlay-left">Affinity Diagram. Prompt: Our class of 30 people each brainstormed questions for an interview. We then utilized the diagram to consolidate all our questions into 8-10 total questions.</div>
-            </div>
-            <div class="hover-caption margin-left mobile-margin-spacing">
-                <img src="./images/mindmap.png" alt="4mindmap on survey design process" style="height: 100%; object-fit: cover;"/>
-                <div class="overlay-right">Using the Mindmap tool to organize my notes on the Survey Design Process.</div>
-            </div>
+        <div class="gallery">
+                
+            <figure class="gallery__item gallery__item--1">
+                <img class="gallery__img" src="./images/AffinityDiagramHWgroup.jpg" alt="zoo 404 page"/>
+                <p class="title">Affinity Diagram. Prompt: Our class of 30 people each brainstormed questions for an interview. We then utilized the diagram to consolidate all our questions into 8-10 total questions.</p> 
+            </figure>
+            <figure class="gallery__item gallery__item--2">
+                <img class="gallery__img" src="./images/mindmap.png" alt="Two Door Cinema Club page"/>
+                <p class="title">Using the Mindmap tool to organize my notes on the Survey Design Process.</p> 
+            </figure>
+            <figure class="gallery__item gallery__item--3">
+                <img class="gallery__img" src="./images/KaladinPersona.png" alt="logo for cosmetics"/>
+                <p class="title">User Persona of a character (Kaladin)</p> 
+            </figure>
+            <figure class="gallery__item gallery__item--4">
+                <img class="gallery__img" src="./images/kaladinjourneymap.png" alt="logo for Logical Imagination"/>
+                <p class="title">Kaladin's Journey Map</p> 
+            </figure>
+            <figure class="gallery__item gallery__item--5">
+                <img class="gallery__img" src="./images/WurmanLATCH.png" alt="John Legend Contest Page"/>
+                <p class="title">Using Wurman's LATCH principles, my group organized Hershey's main products into 5 categories: Location, Alphabetical, Time, Categories, and Hierarchy.</p> 
+            </figure>
         </div>
-        
-        <div class="case-wrapper margin-top mobile-margin-spacing">
-            <div class="hover-caption">
-                <img src="./images/kaladinpersona.png" alt="image of Kaladin Persona" style="height: 100%; object-fit: cover"/>
-                <div class="overlay-left">User Persona of a character (Kaladin)</div>
-            </div>
-            <div class="hover-caption margin-left mobile-margin-spacing">
-                <img src="./images/kaladinjourneymap.png" alt="image of Kaladin Journey Map"/>
-                <div class="overlay-right">Kaladin's Journey Map</div>
-            </div>
-        </div>
-        <div class="case-wrapper hover-caption margin-top mobile-margin-spacing">
-            <img src="./images/WurmanLATCH.png" alt="Image of Hersheys site using Wurman's LATCH"/>
-            <div class="overlay-left">Using Wurman's LATCH principles, my group organized Hershey's main products into 5 categories: Location, Alphabetical, Time, Categories, and Hierarchy.</div>
-        </div>
-        
     </div>
+
 </body>
     <footer>
         <ul>
@@ -276,30 +259,6 @@
         </ul>
         <p>&copy; Copyright gracepeng.design</p>
     </footer>
-    <script>
-        //Get the button
-        // var mybutton = document.getElementById("myBtn");
-
-        // // When the user scrolls down 20px from the top of the document, show the button
-        // window.onscroll = function () {
-        //     scrollFunction()
-        // };
-
-        // function scrollFunction() {
-        //     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        //         mybutton.style.display = "block";
-        //     } else {
-        //         mybutton.style.display = "none";
-        //     }
-        // }
-
-        // // When the user clicks on the button, scroll to the top of the document
-        // function topFunction() {
-        //     document.body.scrollTop = 0;
-        //     document.documentElement.scrollTop = 0;
-        // }
-
-    </script>
 </body>
 
 </html>
