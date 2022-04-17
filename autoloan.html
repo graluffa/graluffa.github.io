@@ -54,6 +54,11 @@
             object-fit:contain;
         }
 
+        .prototype{
+            margin-left:auto;
+            margin-right:auto;
+        }
+
         #designTitle{
             font-size: 2em;
             text-align:center;
@@ -134,45 +139,33 @@
     
     <div class="designHeader">
         <div id="designTitle">
-            <h1><strong>Logical Imagination Logo Re-design</strong></h1>
+            <h1><strong>Car Loan App</strong></h1>
             </div>
         </div>
     </div>
-
-    <a href="./designs.html" class="goBack"><i class="fa-solid fa-circle-chevron-left"></i>Back to gallery</a>
     
     <div class="container">
         <div class="Blurb">
-            <h2>My Final Submission</h2>
-            <h4>On the left, you can see the original logo created in 2004. On the right is my final version.</h4>
+            <h2>The Task</h2>
+            <h4>I was asked by a new local credit union to add an online car loan application feature to their mobile app. The credit union liked the application seen below from Transcomm and wished to use it as a reference. </h4>
             <div class="case-wrapper">
-                <img src="./images/logicaloriginallogo.png" alt="Original Logical Imagination Logo" style="margin-left:5px; margin-bottom:10px"/>
-                <img src="./images/Final.png" alt="Final Logical Imagination Logo" style="margin-left:5px; margin-bottom:10px"/>
+                <img src="./images/carloanoriginal1.png" alt="Transcomm form page 1" style="margin-left:5px; margin-bottom:10px"/>
+                <img src="./images/carloanoriginal2.png" alt="Transcomm form page 2" style="margin-left:5px; margin-bottom:10px"/>
             </div>
             <br>
-            <h2>What was the prompt?</h2>
-            <p>Logical Imagination is working on updating their brand and asked for design submissions for their logo. The logo had to show two sides of the business: the logical, analytical and programming side as well as the creative, design thinking side. Colors used also had to showcase a feeling of trust and vibrancy.</p>
-            <h2>My thought process</h2>
-            <p>See below for all my initial design ideas. 
+            <h2>Behind the scenes of my design</h2>
+            <p>User research was already done prior to this feature implementation. I kept the different sections (Car Loan information, Personal, Income, and Finances) but reduced some of the text. This lessens the visual load for the user (less is more!). 
+            <br>I stayed in line with that thought by adding drop downs menus and "add more" buttons for several questions. This also lessens the burden on the user since the drop downs will give options to choose from. A proress bar was implemented at the top to encourage the user to continue and lets them know how much is left.</p> 
             <br>
+            <h2>My design solution</h2>
+            <div>
+                <img src="./images/Carloanframes.png" alt="auto loan mobile app" style="border-radius:2px"/>
+            </div>
             <br>
-            I used the colors blue, purple, and orange to convey a feeling of trust, creativity/wisdom, and vibrancy. In my earlier designs, I  used circuit boards and flowers inside a lightbulb to showcase technology, vibrancy, and creativity. However, I learned through some user testing that people felt it was too busy and complex.
-            <br>
-            <br>
-            I continued to re-design, ultimately returning to the logo of having the full "Logical Imagination" name and a lightbulb, but integrating the lightbulb into the actual name (the lightbulb forms the "O" of "Logical" and the "I" of "Imagination").
-            <br>
-            <br>
-            With my last design, I changed the bottom of the lightbulb to a pencil to add more imagery of creativity.
-            </p>
-        </div>
-        <h2>My designing journey- all versions</h2>
-        <div class="case-wrapper">
-            <img src="./images/firstlogicalimagination.png" alt="logical imagination logo initial designs" style="margin-right:5px; margin-bottom:10px"/>
-            <img src="./images/secondlogicalimagination.png" alt="logical imagination logo initial designs" style="margin-left:5px; margin-bottom:10px"/>
-        </div>
-        <div class="case-wrapper">
-            <img src="./images/lightbulb-nofill.png" alt="logical imagination logo initial designs" style="margin-right:5px; margin-bottom:10px"/>
-            <img src="./images/lightbulbfilled.png" alt="logical imagination logo initial designs" style="margin-left:5px; margin-bottom:10px"/>
+            <h2>Explore the current prototype below</h2>
+            <div class="prototype" style="text-align:center;">
+                <iframe src="https://marvelapp.com/prototype/aia52c5?emb=1&iosapp=false&frameless=false" width="390" height="735" allowTransparency="true" frameborder="0" style="-webkit-clip-path: inset(2px 2px); clip-path: inset(2px 2px);"></iframe>
+            </div>
         </div>
     </div>
 </body>
@@ -188,6 +181,9 @@
         </ul>
         <p>&copy; Copyright gracepeng.design</p>
     </footer>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Back to top</button>
+
     <script>
         //Get the button
         var mybutton = document.getElementById("myBtn");
