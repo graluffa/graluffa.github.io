@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./images/logofavicon.png" type="image/png" />
+    <title>Grace Peng|UX Designer</title>
+    <script src="https://kit.fontawesome.com/1f06a40a7f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700&family=Jost:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">  
+    <link href="./reset.css" rel="stylesheet" />
+    <link href="./styles.css" rel="stylesheet" />
+    <style>
+
+        body {
+            animation: fadeInAnimation ease 2s;
+            animation-iteration-count: 1;
+            animation-fill-mode: backwards;
+        }
+
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .content{
+            margin-top:1.6em;
+        }
+
+        h2 i {
+            font-size: 1.2rem;
+            color: var(--main-color);
+            margin-left: 0.5em
+        }
+
+        h6 {
+            margin-bottom: 5px;
+            font-size: 1rem;
+            line-height: 1.2rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-top: 1.3em;
+        }
+
+        .case-wrapper {
+            display: flex;
+            margin-right: 64px;
+            margin-left: 64px;
+            flex-direction: column;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: center;
+            box-sizing: border-box;
+
+        }
+
+        .studyHeader {
+            background-color: var(--main-color-faded);
+        }
+
+        .case-study-teaser-text {
+            font-size: 1.3em;
+        }
+
+        .case-study-teaser {
+            display: flex;
+            width: 100%;
+            max-width: 1112px;
+            margin-bottom: 47px;
+            justify-content: space-between;
+            align-items: flex-start;
+            text-align: left;
+            box-sizing: border-box;
+
+        }
+
+        .intro-teaser-left {
+            width: 65.6%;
+            margin-right: 13.4%;
+            box-sizing: border-box
+        }
+
+        .project-title {
+            font-size: 2.8em;
+            margin-bottom: -0.7em;
+            font-weight:600;
+        }
+
+        .project-description {
+            font-size: 2em;
+            margin-bottom: 0.3em;
+            color: rgb(89, 41, 113);
+            font-weight:600;
+            font-style:italic;
+        }
+
+        .facts-details {
+            margin: 0em;
+        }
+
+
+        .large-paragraph {
+            font-size: 1.05rem;
+            line-height: 1.4;
+        }
+
+        .reflections-text {
+            color: rgb(89, 41, 113);
+            font-size: 0.93em;
+            line-height: 1.2;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            padding-top:0.2em;
+        }
+
+        .reflection-img{
+            width:30%; 
+            margin-left:auto; 
+            margin-right:auto;
+            margin-top:1em;
+        }
+
+        .UCD-header {
+            font-weight: 600;
+            padding: 0 16px;
+            font-size:1.8em;
+        }
+
+        .Explorations{
+            margin-top:-1em;
+        }
+
+        .text-list{
+            font-weight:400;
+            margin-left:1.1em;
+            margin-right:auto;
+            line-height:1.618em;
+            }
+            
+
+        .text-list2{
+            font-weight:400;
+            margin-top:-1em;
+            margin-left:1.1em;
+            margin-right:auto;
+            line-height:1.618em;
+        }
+
+        span{
+            font-weight:500;
+        }
+
+        .final-product{
+            margin-right:auto;
+        }
+
+        ul {
+            list-style-type: square;
+        }
+
+        #research-synthesis-img {
+            margin-bottom: 8px;
+        }
+
+        .navigation-mobile {
+                display: none;
+        }
+        
+        .mobilePrototypeButton{
+            display:none;
+        }
+
+        #viewFinalPrototype {
+            padding:0.5em 0.4em;
+            text-align: center;
+            border-radius: 5px;
+            border: 2px solid #000;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 0.9rem;
+            color: rgb(22, 21, 21);
+            background: var(--main-color-faded);
+            }
+
+        #viewFinalPrototype:hover{
+            transform: scale(1.1);
+            transition: all 0.2s ease-in-out;
+        }
+        
+
+        @media screen and (max-width: 800px){
+            body > header div ul {
+                max-width: 100%;
+            }
+            .navigation {
+                display: none;
+            }
+
+            Header{
+                display:none;
+            }
+
+            .studyHeader{
+                margin-top:-1.2em;
+            }
+
+            nav {
+                padding-top:50px;
+            }
+
+            .navigation-mobile {
+                top: 0px;
+                margin-top: 0px;
+                display: flex;
+                flex-direction: row;
+                padding: 0;
+                width: 100%;
+                height: auto;
+                justify-content: center;
+                overflow: scroll;
+                position: fixed;
+                text-align: left;
+                z-index: 100;
+                background: var(--main-color);
+                margin-bottom: 0;
+            }
+
+            .navigation-mobile > li {
+                list-style: none;
+            }
+
+            .Explorations{
+                margin-top: 1em;
+            }
+
+            .navigation-mobile li {
+                padding: 16px 24px;
+            }
+
+            .navigation-mobile li a {
+                color: #fff;
+            }
+
+            .reflections-text {
+                display:none;
+            }
+
+            .case-study {
+                margin: 0;
+            }
+
+
+            .case-study-teaser {
+                max-width: 100%;
+                width:100%;
+                display: flex;
+                flex-direction: column-reverse;
+            }
+
+            .intro-teaser-left{
+                width:100%;
+            }
+
+            .studyContent{
+                margin-left:1em;
+            }
+
+            body > header div {
+                display: block;
+            }
+
+            .figmaLarge{
+                display:none;
+            }
+            
+            .mobilePrototypeButton{
+                display:inline;
+                margin-bottom:2em;
+                float:right;
+                margin-right:1em;
+
+            }
+
+        }
+
+    </style>
+    <SCRIPT language="JavaScript">
+        var password;
+        var pass1="Heartbeat"; 
+        password=prompt('Enter password from resume'); 
+        if (password==pass1) {
+            alert('Correct Password! Click OK to Enter!');
+        } 
+        else { 
+            alert("Wrong Password");
+            window.location="https://gracepeng.design";
+        }  
+        
+        </SCRIPT>
+
+        
+</head>
+
+<body>
+    <nav>
+        <ul class="navigation-mobile">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="index.html#myWork">Work</a></li>
+            <li><a href="index.html#aboutMe">About</a></li>
+            <li><a href="index.html#contactForm">Contact</a></li>
+        </ul>
+    </nav>
+    <header class="sticky">
+        <a href="./index.html"><img id="siteLogo" src="./images/Logo.png" alt="Grace Peng, designer, logo" /></a>
+        <div>
+            <nav role="navigation">
+                <ul class="navigation">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="index.html#myWork">Work</a></li>
+                    <li><a href="index.html#aboutMe">About</a></li>
+                    <li><a href="index.html#contactForm">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="content">
+    <div class="studyHeader">
+        <div>
+            <img class="MonicoImage img-crisp" src="./images/drugsheart.jpg" alt="Monico website sign up page" />
+        </div>
+    </div>
+    <section class="case-wrapper">
+        <div class="studyContent">
+            <div id="case-study-introduction">
+                <h1 class="project-title">CVS Client Tracker in a Nutshell</h1>
+                <h2 class="project-description">How might we streamline the workflow and reduce bad data?</h2>
+            </div>
+            <div class="case-study-teaser">
+                <div class="intro-teaser-left">
+                    <div class="case-study-teaser-text">
+                        <p>The Medical Rebates Product Team of CVS manages large scale client contracts (think hospitals and companies that purchase bulk). They work with several teams upstream and downstream such as sales, legal, and rebates to ensure the accuracy of their contracts and eligible rebates. Millions of dollars of revenue per year depend on the completion of these contracts.</p>
+                        <p>The Product team currently manually compares documents and records the details of each client's contract in one spreadsheet from client information down to what drug classes they are electing to have.</p>
+                        <p>Our team's goal was to reduce errors, streamline their current process to save them time, give them visibility into work progress, and reduce bad data by identifying a source of truth.</p>
+                    </div>
+                </div>
+                <div class="case-study-teaser-right">
+                    <div class="detail-head-right">
+                        <h6>Company</h6>
+                        <p class="facts-details">CVS</p>
+                        <h6>Team</h6>
+                        <p class="facts-details">2-3 Product Designers</p>
+                        <p class="facts-details">6 Engineers</p>
+                        <p class="facts-details">3 Product Managers</p>
+                        <h6>Role</h6>
+                        <p class="facts-details">UI/UX Product Designer</p>
+                        <h6>Tools & Methods</h6>
+                        <p class="facts-details">Figma</p>
+                        <p class="facts-details">Miro</p>
+                        <h6>Duration</h6>
+                        <p class="facts-details">Timeline: 6-12 months</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="case-wrapper">
+        <div>
+            <h2 class="UCD-header">The Problem Space</h2>
+            <div class="text-group">
+                <p class="large-paragraph medium-spacer col-1">
+                    Our user group is small but vital. Though there are only two of them right now, they coordinate with several groups; some are client-facing and provide them with contract details to enter into spreadsheets while others depend on them for information to calculate the client's rebates. 
+                    <br><br>With their current process, all work is done in one Excel spreadsheet without any clear separation of workflow and requires lots of horizontal scrolling. Entries for new client contracts are intermixed with those for management/renewal of old ongoing client contracts. 
+                    <br><br>The Product Team is tasked with validating all incoming data from the Sales and Legal teams while also providing information to Rebates and other tertiary teams that request specific data on a client at any given moment. 
+                    <br><br>
+                    A Service Blueprint of the workflow from end-to-end was created to understand the Medical Rebates ecosystem and workflow.
+                    <br><br>
+                    <img class="img-crisp" src="./images/ServiceBlueprint.png" alt="service blueprint MRPAT"
+                </p>
+                <p class="reflections-text col-2">
+                    See my notes and reflections in these side notes over here!
+                    <img class="reflection-img" src="./images/Gracevector.png" alt="grace vector cartoon"/>
+                </p>
+            </div>
+            <br><br><br>
+        </div>
+
+        <div>
+            <h2 class="UCD-header Explorations">Exploring the unknown</h2>
+            <div class="text-group">
+                <p class="large-paragraph medium-spacer col-1">
+                    User interviews with all Medical Rebate adjacent staff were conducted via Webex where participants were able to share their screen and walk the team through their current day process. This list included Management, Sales, and Underwriting, Product Team, Rebate Research and Legal teams.
+                    <br>
+                    <br>
+                    <img src="./images/CVSInterviews.png" alt="Screenshot of initial CVS Interviews" />
+                    <br>
+                    <strong>Initial findings from our interviews:</strong>
+                    Users are concerned about data accuracy and want one "source of truth".
+                </p>
+                <p class="reflections-text col-2">
+                    I joined the team after initial user interviews and affinity mapping were completed. 
+                    <br><br>
+                    However, I understood how interconnected and dependent all the teams were on each other's work and how data error can impact work efficiency throughout the process.
+                </p>
+            </div>
+        </div>
+
+        <div>
+            <h2 class="UCD-header">Synthesizing and analyzing data</h2>
+            <div class="text-group">
+                <p id="research-synthesis-img" class="large-paragraph medium-spacer col-1">
+                    Our team spent time Affinity Mapping our user interview notes and completed several exercises to give us direction as we entered the next phase in the Double Diamond process of Design thinking: Discovery and Framing.
+                    <br><br>
+                    <img src="./images/ResearchAffinityMap.jpg" alt="CVS Research Synthesis Map" />
+                    <br><br>
+                    <strong>Key insights from initial analysis:</strong>
+                <p class="reflections-text col-2">
+                Affinity Mapping our notes and findings gave us a way to find patterns and bucket similarities in experience across all users.
+                </p>
+            </div>
+            <div class="text-group">
+                <ul class="text-list medium-spacer col-1">
+                    <li>The Product Team is at the center of a client's contract lifecycle</li>
+                    <li>Majority of other teams in the process rely on them to gather, organize, and maintain client contract information. </li>
+                    <li>Users find the current day tracker tedious and time consuming to setup and look for information</li>
+                    <li>Manual entry means lots of clerical error and lack of accurate data</li>
+                    <li>Lack of one source of truth. Users are not sure what data they can rely on </li>
+                </ul>
+                <p class="reflections-text col-2">
+                I learned through reviewing our research that the Product Team serves as a bottleneck in the workflow. By helping improve their workflow, we increase efficiency throughout.
+                </p>
+            </div>
+        </div>
+
+        <div>
+            <h2 class="UCD-header">Visualizing and understanding our users</h2>
+            <div class="text-group">
+                <p id="research-synthesis-img" class="large-paragraph medium-spacer col-1">
+                    <img src="./images/ProblemPrioritzationCVS.png" alt="CVS Problem Prioritization"/>
+                    <br>
+                    Our team spent time Affinity Mapping our user interview notes and completed several exercises to help us through the "Discovery and Framing" phase of the Design Thinking "Double Diamond" process. This involved the following exercises: problem discovery and prioritization, insight prioritization, risk analysis, and solution brainstorming and prioritization. 
+                    <br>
+                    <img src="./images/SolutionBrainstorming1.jpg" alt="CVS Solution Brainstorming Bad Data"/>
+                    <br>
+                    Together, we brainstormed "How Might We" statements to get our brains working on exploring different possible solutions.
+                </p>
+                <p class="reflections-text col-2">
+                These exercises allowed us to explore all the possible problems before tackling the most impactful and helpful one.
+                <br><br>
+                We then used different "How Might We" statements to explore different solutions. All members (Engineers, Designers, Product Managers) contributed.
+                <br><br>
+                After researching and defining our target users, we created an extensive user persona to keep our user in the forefront of our mind.
+                </p>
+            </div>
+            <div class="text-group">
+                <p class="large-paragraph medium-spacer col-1">
+                    <img src="./images/ProductTeamPersona.jpg" alt="image of Product Team Persona" />
+                    <br>
+                </p>
+                <p class="reflections-text col-2">
+                    Our team created User Profiles/Personas for all Medical Rebates users, but we are focusing on the Product Team for MVP. The persona makes sure we keep all the users' needs and wants in mind.
+                </p>
+            </div>
+        </div>
+
+        <div>
+            <h2 class="UCD-header">Collaborate, brainstorm, ideate, repeat</h2>
+            <div class="text-group">
+                <p class="large-paragraph medium-spacer col-1">
+                    After initial solution brainstorming with our core XP/Agile Product team, we brought in our two users (one of whom is our Business PM) to collaborate with us in a 2-day Design Studio workshop where we provided our main "How Might We" problem statements and gave individuals time to sketch out solution ideas.
+                    <br><br>We then shared our ideas to the team, did a second round of sketching where participants can improve or add on to their ideas using others' ideas. Afterwards, the team collaboratively identified key and common features or elements. 
+                    <br>
+                    <br>
+                    <img src="./images/MRPATDesignStudio.jpg" alt="Design Studio Final Day Image" />
+                </p>
+                <p class="reflections-text col-2">
+                    This was excellent for gathering diverse perspectives by collaborating with engineers, Product Managers, users, and designers to find different solutions to one problem as well as bounce ideas off one another. 
+                    <br><br>It also gave us insight into what our users are looking for and validate whether the design team is on the right track.
+                </p>                
+            </div>
+        </div>
+        <br>
+        <div>
+            <h2 class="UCD-header">User Maps and Info Architecture</h2>
+            <div class="text-group">
+                <p class="large-paragraph medium-spacer col-1">
+                    With a bulk of our research done, our team decided we needed to map out the current user flow state as well as ideal/future user flow. Our users' current day workflow is in a spreadsheet with lots of horizontal scrolling, manual entry, reliance on comments as a changelog, and lack of clarity on workflows (adding something new versus maintaining).
+                    <br><br>
+                    <img src="./images/InitialClientTracker.png" alt="Image of MRPAT's Initial Client Tracker">
+                </p>
+                <p class="reflections-text col-2">
+                    As a design team, we planned to continue talking to our users and conduct more research on specific features as we started building, but we had enough to get started.
+                </p>
+            </div>
+            <div class="text-group">
+                <p class="large-paragraph medium-spacer col-1">
+                    We utilized the user interview notes for reference and current day tracker as a visual guide to create two diagrams:
+                    <br><br> 
+                    1) The ideal workflow in our tracker from beginning to end.
+                    <br>
+                    <img src="./images/IdealUserFlow.jpg" alt="Image of MRPAT Ideal workflow/architecture">
+                    <br>
+                    2) A hierarchy of how their clients are set up and bucketed. In order to ensure we understood their workflow, we validated the diagrams with the users.
+                    <br>
+                    <img src="./images/PDLHierarchy.jpg" alt="Image of MRPAT Hierarchy">
+                </p>
+                <p class="reflections-text col-2">
+                    These two diagrams continue to serve as our version of informational architecture as we design and build each part of the new tool. 
+                    <br><br>We took into consideration their present day as well as their needs as we created them, updating them as needed.
+                </p>
+            </div>
+        </div>
+        <br>
+        <div>
+            <h2 class="UCD-header">Low Fidelity Designs</h2>
+            <div class="text-group">
+                <p class="large-paragraph medium-spacer col-1">
+                    After our Design Studio and Mapping exercises, we (designers) created low fidelity mockups together through a series of individual brainstorming, sharing, and iterating. We shared these with users for initial validation as well as get buy-in from the stakeholders to continue investing in the product. 
+                    <br>
+                    <br>
+                    <img src="./images/Dashboard2LowFi.jpg" alt="Low Fidelity Mockup of Dashboard" style="border:1px solid #3b3434"/>
+                    <br>
+                    <img src="./images/ElectionBuilderLoFi.jpg" alt="Low Fidelity Mockup of Drug Election Builder" style="border:1px solid #3b3434"/>
+                    <br>
+                    <img src="./images/SummaryLowFi.jpg" alt="Low Fidelity Mockup of Client Summary" style="border:1px solid #3b3434"/>
+                </p>
+                <p class="reflections-text col-2">
+                    Low Fidelity screens allowed us to show concepts quickly. Plus, the key stakeholders were less interested in the details and more on whether we had a viable solution. <br><br> 
+                    We continued to iterate and eventually moved away from some of these initial ideas. However, as we designed and validated, we ended up coming back to a lot of these early concepts.
+                </p>
+            </div>
+        </div>
+
+        <div>
+            <h2 class="UCD-header">Validating and Testing</h2>
+            <div class="text-group">
+                <p class="large-paragraph medium-spacer col-1">
+                    Now that we have aligned with the business stakeholders on the plans and goals, it was time for execution. Throughout this MVP build phase, we have continued to research with users and meet with our team for design critiques and feasibility discussions. 
+                    <br>
+                    <br>
+                    Throughout the process, we run usability tests to validate with our users. We conducted recorded moderated tests with clickable prototypes - where users shared their screen and talked aloud - and A/B testing to see which design option performed best. Notes were consolidated into a Miro board for easy analysis and sharing.
+                    <br><br>
+                    <img src="./images/MRPATUsability.jpg" alt="Image of MRPAT Usability Test Notes">
+                </p>
+                <p class="reflections-text col-2">
+                    I learned the nuance of writing open-ended but targeted questions that can elicit valuable/helpful user responses without leading them.
+                </p>
+            </div>
+        </div>
+
+        <div>
+            <h2 class="UCD-header">Where we are and what is next</h2>
+            <div class="text-group">
+                <p class="large-paragraph medium-spacer col-1">
+                We are starting to wrap up MVP and create a list of Post-MVP features to consider after our re-alignment meeting. In the meantime, we have created a workable solution that consolidates their documents and workflow in one tool, allows for some automation of data, and ultimately improves the current process time.
+                <br><br>
+                <img src="./images/MRPATDashboard.png" alt="wireframe of MRPAT Dashboard" style="border:1px solid #3b3434"/>
+                <br>
+                <img src="./images/MRPATElectionBuilder.png" alt="wireframe of MRPAT Client Builder" style="border:1px solid #3b3434"/>
+                <br>
+                <img src="./images/MRPATSummary.png" alt="wireframe of MRPAT Summary Page" style="border:1px solid #3b3434"/>
+                </p>
+                <p class="reflections-text col-2">
+                    In the spirit of MVP, we have iterated multiple times, taking into account user needs, technical feasibility, business, demands, and good user experience to create the minimum viable product that our users can use now. 
+                    <br><br>
+                    I have learned how to push for features our users need but also think about how to provide it in a way that is "good enough for now", keeping the polished version for the next MVP iteration cycle.
+                </p>
+            </div>
+        </div>
+    </section>
+    </div>    
+
+    <footer>
+        <ul>
+            <li><a href="https://www.figma.com/@graceyp" title="figma"><i class="fa-brands fa-figma"></i></a></li>
+            <li><a href="https://www.instagram.com/gracey_peng/" title="instagram"><i
+                        class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="https://www.pinterest.com/graluffa/" title="pinterest"><i
+                        class="fa-brands fa-pinterest"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/graceypeng/" title="linked in"><i
+                        class="fa-brands fa-linkedin"></i></a></li>
+            <li><a href="mailto:pengg2388@gmail.com" title="email"><i class="fa-solid fa-envelope"></i></a></li>
+        </ul>
+        <p>&copy; 2022 by Grace Peng</p>
+    </footer>
+
+    <script>
+        // Sticky Navigation; When the user scrolls the page, execute myFunction
+        window.onscroll = function() {myFunction()};
+
+        // Get the navbar
+        var navbar = document.getElementById("navigation");
+
+        // Get the offset position of the navbar
+        var sticky = navbar.offsetTop;
+
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+
+        document.querySelectorAll("img").forEach((item) => {
+            item.addEventListener("click", (event) => {
+            const image = event.target.getAttribute("src");
+            window.open(
+            image, "_blank");
+            });
+        });
+
+    </script>
+
+
+</body>
+
+</html>

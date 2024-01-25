@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf=8">
     <link rel="icon" href="./images/logofavicon.png" type="image/png" />
-    <title>Grace Peng</title>
+    <title>Grace Peng|UX Designer</title>
     <script src="https://kit.fontawesome.com/1f06a40a7f.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;700&family=Lora&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700&family=Jost:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link href="./reset.css" rel="stylesheet" />
     <link href="./styles.css" rel="stylesheet" />
     <style>
@@ -68,7 +68,7 @@
         }
 
         .work-subheader{
-            font-size:2em;
+            font-size:1.5em;
         }
 
         #workHeading{
@@ -105,14 +105,21 @@
         #myWork,
         #contactForm {
             background-color: var(--main-color-faded);
-            padding: 1em 3em 3em 3em;
             margin-left: -1em;
             margin-right: -1em;
         }
 
+        #myWork{
+            padding:1em 3em 3em 3em;
+        }
+
+        #contactForm{
+            padding: 1em 3em 0.5em 3em;
+        }
+
         #myWork h2 {
             margin-top: 0;
-            font-size:2em;
+            font-size:1.6em;
         }
 
         #myWork article {
@@ -136,6 +143,11 @@
             font-weight: bold;
         }
 
+        #workLink:hover{
+            color: var(--alt-color);
+            text-decoration: underline;
+        }
+
         #aboutMe,
         #hello {
             margin-left: -1em;
@@ -148,10 +160,16 @@
             margin-right: 3em;
         }
 
-        #contactForm h2 {
-            max-width: 500px;
+
+        #contactForm h1 {
+            text-align:center;
             margin-left: auto;
             margin-right: auto;
+            font-size:2em;
+        }
+
+        #aboutMeTitle{
+            font-size: 2em;
         }
 
         .navigation-mobile {
@@ -164,12 +182,13 @@
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
-                padding-left: 3em;
-                padding-right: 3em;
+                padding: 0.5em 3em 0em 3em;
+                margin-bottom:3.5em;
+                margin-top:2em;
             }
 
             #hello p {
-                font-size: 2.7rem;
+                font-size: 2.4rem;
             }
 
             #hello>div:first-child {
@@ -229,13 +248,24 @@
             }
         }
 
+
         @media screen and (max-width: 800px){
             .navigation {
                 display: none;
             }
+
+            Header{
+                display:none;
+            }
+            
+            #hello{
+                margin-top:2em;
+            }
+            
             nav {
                 padding-top:50px;
             }
+
 
             .navigation-mobile {
                 top: 0px;
@@ -250,7 +280,7 @@
                 position: fixed;
                 text-align: left;
                 z-index: 100;
-                background: #3cb8b4;
+                background:  var(--main-color);
                 margin-bottom: 0;
             }
 
@@ -279,10 +309,13 @@
             <li><a href="index.html#contactForm">Contact</a></li>
         </ul>
     </nav>
-    <header>
-        <a href="./index.html"><img id="siteLogo" src="./images/Logo.png" alt="Grace Peng, designer, logo" /></a>
+    <header class="sticky">
+        <a href="./index.html">
+            <img id="siteLogo" src="./images/Logo.png" alt="Grace Peng, designer, logo"/>
+        </a>
+
         <div>
-            <a href="./index.html"><h1 id="top">Grace Peng</h1></a>
+            <!-- <a href="./index.html"><h1 id="top">Grace Peng</h1></a> -->
             <nav>
                 <ul class="navigation">
                     <li><a href="./index.html">Home</a></li>
@@ -293,76 +326,77 @@
             </nav>
         </div>
     </header>
-    <main>
+    <main class="content">
         <section id="hello">
             <div class="mbot">
-                <p> Hi there. <br/> I'm Grace, a curious UX Designer in Windy City Chicago. </br>I love hearing people's stories and weaving them throughout the production process.</p>
+                <p> Hi there. 
+                <br> I'm Grace, a curious UX Designer based in Windy City Chicago. 
+                <br>I love hearing people's stories and weaving them throughout the production process.</p>
                 <div>
                     <a href="#myWork" id="viewWorkButton" class="allButtons">See My Work</a>
                     <a href="#contactForm" id="contactButton" class="allButtons">Get in touch</a>
                 </div>
             </div>
             <div>
-                <object type="image/svg+xml" data="./images/GraceThoughtBubble.svg">
+                <object type="image/svg+xml" data="./images/GraceThoughtBubble.svg" aria-label="grace vector">
                     <img id="introGrace" src="./images/GraceThoughtBubble.svg" alt="picture of Grace Peng" />
                 </object>
             </div>
         </section>
         <section id="myWork">
-            <h1 id="workHeading">Featured Work<a href="#top" title="back to top"><i class="fa-solid fa-chevron-circle-up"></i></a></h1>
+            <h1 id="workHeading">Featured Work</h1>
 
             <article>
                 <div class="fadein">
-                    <a href="./Monico Case Study.html"><img src="./images/SignUpPage.png" alt="monico sign up page" /></a>
+                    <a href="./CVS Case Study.html"><img src="./images/MRPATMockup.png" alt="monico home page" /></a>
+                </div>
+                <div>
+                    <h2 class="work-subheader">CVS Case Study</h2>
+                    <p>Modernizing and automating the CVS Medical Rebate Product Team's current work process from a spreadsheet to a custom web application</p>
+                    <a href="./CVS Case Study.html" id="workLink">Read Case Study</a>
+                </div>
+            </article>
+
+            <article>
+                <div class="fadein">
+                    <a href="./Monico Case Study.html"><img src="./images/MonicoMockupHomePage.png" alt="monico home page" /></a>
                 </div>
                 <div>
                     <h2 class="work-subheader">Monico Case Study</h2>
                     <p>Designing a website and app to improve travel experiences. Helping people feel like locals wherever they may be.</p>
-                    <a href="./Monico Case Study.html">Read Case Study</a>
+                    <a href="./Monico Case Study.html" id="workLink">Read Case Study</a>
                 </div>
             </article>
 
             <article>
                 <div class="fadein">
-                    <a href="./autoloan.html"><img src="./images/carloanmockup2.jpg" alt="car loan application mockup" /></a>
+                    <a href="./autoloan.html"><img src="./images/carloanmockup2.png" alt="car loan application mockup" /></a>
                 </div>
                 <div>
-                    <h2 class="work-subheader">Car Loan Design Solution</h2>
+                    <h2 class="work-subheader featuredInfo">Car Loan Design Solution</h2>
                     <p>Making a car loan application mobile-friendly.</p>
-                    <a href="./autoloan.html">See my solution</a>
+                    <a href="./autoloan.html" id="workLink">See my solution</a>
                 </div>
             </article>
 
             <article>
                 <div class="fadein">
-                    <a href="./designs.html"><img src="./images/TwoDoor.png" alt="Two Door Cinema Club Landing Page" /></a>
+                    <a href="./designs.html"><img src="./images/TwoDoorMockup.png" alt="Two Door Cinema Club Landing Page" /></a>
                 </div>
                 <div>
-                    <h3 class="work-subheader">Design Odds & Ends</h3>
+                    <h2 class="work-subheader">Design Odds & Ends</h2>
                     <p>Take a peek at some design challenges I completed ranging from icons to landing pages. </p>
-                    <a href="./designs.html">See designs</a>
+                    <a href="./designs.html" id="workLink">See designs</a>
                 </div>
             </article>
-
-            <article>
-                <div class="fadein">
-                    <a href="./Tools.html"><img src="./images/mindmap.png" alt="Image of a Mind Map tool" /></a>
-                </div>
-                <div>
-                    <h2 class="work-subheader">Favorite Tools</h2>
-                    <p>A gallery of my favorite design tools.</p>
-                    <a href="./Tools.html">See tool gallery</a>
-                </div>
-            </article>
-
         </section>
 
         <section id="aboutMe">
             <div>
-                <img src="./images/PXL_20210924_160927286.MP~2(1-2.jpg" alt="picture of Grace Peng" />
+                <img src="./images/profilepic.jpg" alt="picture of Grace Peng" />
             </div>
             <div>
-                <h2>A Little Bit About Me<a href="#top" title="back to top"><i class="fa-solid fa-chevron-circle-up"></i></a></h2>
+                <h1 id="aboutMeTitle">A Little Bit About Me</h1>
                 <p>I'm Grace, a curious UX designer in Chicago.</p>
                 <p>In my past life as a dietitian, I spent my days listening to people's stories, empathizing with them, and collaborating with them to find suitable solutions. It was during my time with the Women, Infant, and Children (WIC) program that I saw the barriers poor user design and technology created between my clients and their goals. Through User Centered Design, I am able to use my listening skills and empathy to help break that barrier down. </p>
                 <p>In my off time, you can catch me...
@@ -374,55 +408,33 @@
                     </ul>
                 </p>
 
-                <a href="https://drive.google.com/file/d/1pgpddtPuwd6a32QSlctdl_CfA-Bqlfhz/view" style="font-weight:bold">See my resume</a>
+                <a href="./images/resumepdf.pdf" style="font-weight:bold">See my resume</a>
                 
             </div>
         </section>
 
         <section id="contactForm">
-            <h2>Let's Work Together<a href="#top" title="back to top"><i class="fa-solid fa-chevron-circle-up"></i></a></h2>
+            <h1>Let's Work Together</h1>
             <form>
-                <div>
-                    <label>First
-                        <input type="text" value="" />
-                    </label>
-                </div>
-                <div>
-                    <label>Last
-                        <input type="text" value="" />
-                    </label>
-                </div>
-                <div>
-                    <label>Email
-                        <input type="email" value="" />
-                    </label>
-                </div>
-                <div>
-                    <label>Message
-                        <textarea></textarea>
-                    </label>
-                </div>
-                <div>
-                    <button type="submit"class="allButtons">Send Message</button>
-                </div>
+                <!-- Start hubspot form -->
+                <script type="text/javascript" src="https://form.jotform.com/jsform/231726967811161"></script>
             </form>
         </section>
 
     </main>
     <footer>
         <ul>
-            <li><a href="https://dribbble.com/graceyp" title="dribbble"><i class="fa-solid fa-basketball"></i></a></li>
+            <li><a href="https://www.figma.com/@graceyp" title="figma"><i class="fa-brands fa-figma"></i></a></li>
             <li><a href="https://www.instagram.com/gracey_peng/" title="instagram"><i
                         class="fa-brands fa-instagram"></i></a></li>
             <li><a href="https://www.pinterest.com/graluffa/" title="pinterest"><i
                         class="fa-brands fa-pinterest"></i></a></li>
             <li><a href="https://www.linkedin.com/in/graceypeng/" title="linked in"><i
                         class="fa-brands fa-linkedin"></i></a></li>
+            <li><a href="mailto:pengg2388@gmail.com" title="email"><i class="fa-solid fa-envelope"></i></a></li>
         </ul>
-        <p>&copy; Copyright gracepeng.design</p>
+        <p>&copy; 2022 by Grace Peng</p>
     </footer>
-
-    <button onclick="topFunction()" id="myBtn" title="Go to top">Back to top</button>
 
     <script>
 
@@ -440,23 +452,25 @@
                 });
         })();
 
+        // Sticky Navigation; When the user scrolls the page, execute myFunction
+            window.onscroll = function() {myFunction()};
 
-        //Get the button
-        var mybutton = document.getElementById("myBtn");
+            // Get the navbar
+            var navbar = document.getElementById("navigation");
 
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function () {
-            scrollFunction()
-        };
+            // Get the offset position of the navbar
+            var sticky = navbar.offsetTop;
 
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                mybutton.style.display = "block";
+            // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+            function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
             } else {
-                mybutton.style.display = "none";
+                navbar.classList.remove("sticky");
             }
         }
-
+        //end sticky navigation script//
+        
         // When the user clicks on the button, scroll to the top of the document
         function topFunction() {
             document.body.scrollTop = 0;

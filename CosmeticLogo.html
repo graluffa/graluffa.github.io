@@ -4,15 +4,33 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./images/logofavicon.png" type="image/png" />
-    <title>Grace Peng</title>
+    <title>Grace Peng|UX Designer</title>
     <script src="https://kit.fontawesome.com/1f06a40a7f.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;700&family=Lora&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700&family=Jost:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link href="./reset.css" rel="stylesheet" />
     <link href="./styles.css" rel="stylesheet" />
     <style>
+        body {
+            animation: fadeInAnimation ease 2s;
+            animation-iteration-count: 1;
+            animation-fill-mode: backwards;
+        }
+        
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
 
+        .content{
+            margin-top:1.6em;
+        }
+        
         h2 i {
             font-size: 1.2rem;
             color: var(--main-color);
@@ -56,14 +74,12 @@
         #designTitle{
             font-size: 2em;
             text-align:center;
-            margin-top: -0.6em;
             padding-bottom: 0.5em;
             padding-top: 0.5em;
         }
 
         .goBack{
             display: inline-block;
-            margin-left: 3em;
             margin-top:2em;
         }
         
@@ -71,24 +87,9 @@
             margin-right:0.5em;
         }
 
-        #myBtn {
-            display: none;
-            position: fixed;
-            bottom: 20px;
-            right: 30px;
-            z-index: 99;
-            font-size: 18px;
-            border: none;
-            outline: none;
-            background-color: var(--main-color);
-            color: var(--main-text-color);
-            cursor: pointer;
-            padding: 15px;
-            border-radius: 4px;
-        }
-
-        #myBtn:hover {
-            background-color: var(--alt-color);
+        .fa-circle-chevron-left{
+            padding-left:0;
+            margin-left:0;
         }
 
         ul{
@@ -99,9 +100,36 @@
         }
 
         /* for media breakpoint below */
-        @media screen and (min-width: 48em) {}
- 
+        @media only screen and (max-width: 800px) {
+            .navigation {
+                display: none;
+            }
 
+            Header{
+                display:none;
+            }
+
+            .designHeader{
+                margin-top:-1.6em;
+            }
+            
+            .navigation-mobile {
+                top: 0px;
+                margin-top: 0px;
+                display: flex;
+                flex-direction: row;
+                padding: 0;
+                width: 100%;
+                height: auto;
+                justify-content: center;
+                overflow: scroll;
+                position: fixed;
+                text-align: left;
+                z-index: 100;
+                background: var(--main-color);
+                margin-bottom: 0;
+            }
+        }
     </style>
 </head>
 
@@ -114,12 +142,12 @@
             <li><a href="index.html#contactForm">Contact</a></li>
         </ul>
     </nav>
-    <header>
+    <header class="sticky">
         <a href="./index.html"><img id="siteLogo" src="./images/Logo.png" alt="Grace Peng, designer, logo" /></a>
         <div>
-            <a href="./index.html"><h1 id="top">Grace Peng</h1></a>
+            <!-- <a href="./index.html"><h1 id="top">Grace Peng</h1></a> -->
             <nav>
-                <ul>
+                <ul class="navigation">
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="index.html#myWork">Work</a></li>
                     <li><a href="index.html#aboutMe">About</a></li>
@@ -129,14 +157,11 @@
         </div>
     </header>
     
+    <div class="content">
     <div class="designHeader">
-        <div id="designTitle">
-            <h1><strong>Cosmetic Store Logo Design</strong></h1>
-            </div>
-        </div>
+        <div id="designTitle"><h1>Cosmetic Store Logo Design
+        </h1></div>
     </div>
-    
-    <a href="./designs.html" class="goBack"><i class="fa-solid fa-circle-chevron-left"></i>Back to gallery</a>
 
     <div class="container">
         <div class="Blurb">
@@ -154,19 +179,22 @@
             <img src="./images/75x75 on White.png" alt="Alison Cosmetic Logo on White" style="margin-right:5px; margin-bottom:10px"/>
             <img src="./images/75x75 on black.png" alt="Alison Cosmetic Logo on Black" style="margin-left:5px; margin-bottom:10px"/>
         </div>
+        <a href="./designs.html" class="goBack"><i class="fa-solid fa-circle-chevron-left"></i>Back to gallery</a>
+        </div>
     </div>
 </body>
     <footer>
         <ul>
-            <li><a href="https://dribbble.com/graceyp" title="dribbble"><i class="fa-solid fa-basketball"></i></a></li>
+            <li><a href="https://www.figma.com/@graceyp" title="figma"><i class="fa-brands fa-figma"></i></a></li>
             <li><a href="https://www.instagram.com/gracey_peng/" title="instagram"><i
                         class="fa-brands fa-instagram"></i></a></li>
             <li><a href="https://www.pinterest.com/graluffa/" title="pinterest"><i
                         class="fa-brands fa-pinterest"></i></a></li>
             <li><a href="https://www.linkedin.com/in/graceypeng/" title="linked in"><i
                         class="fa-brands fa-linkedin"></i></a></li>
+            <li><a href="mailto:pengg2388@gmail.com" title="email"><i class="fa-solid fa-envelope"></i></a></li>
         </ul>
-        <p>&copy; Copyright gracepeng.design</p>
+        <p>&copy; 2022 by Grace Peng</p>
     </footer>
     <script>
         //Get the button

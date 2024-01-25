@@ -4,11 +4,11 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./images/logofavicon.png" type="image/png" />
-    <title>Grace Peng</title>
+    <title>Grace Peng|UX Designer</title>
     <script src="https://kit.fontawesome.com/1f06a40a7f.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;700&family=Lora&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700&family=Jost:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link href="./reset.css" rel="stylesheet" />
     <link href="./styles.css" rel="stylesheet" />
     <style>
@@ -26,6 +26,10 @@
             100% {
                 opacity: 1;
             }
+        }
+
+        .content{
+            margin-top:1.6em;
         }
 
         h2 i {
@@ -56,10 +60,13 @@
         #designTitle{
             font-size: 2em;
             text-align:center;
-            margin-top: -0.6em;
             padding-bottom: 0.5em;
             padding-top: 0.5em;
         }
+
+        /* .designSubtitle{
+            text-align:center;
+        } */
 
 
         ul{
@@ -72,7 +79,7 @@
         
         .container {  
             width: 75%;
-            margin: 3em auto;
+            margin: 2em auto;
             padding:5px;
         }
 
@@ -159,8 +166,8 @@
 
         .gallery {
             display: grid;
-            grid-template-columns: repeat(6, auto);
-            grid-template-rows: repeat(6, auto);
+            grid-template-columns: repeat(7, auto);
+            grid-template-rows: repeat(7, auto);
             grid-gap: 25px; 
         }
 
@@ -220,9 +227,34 @@
             grid-row-end: 6;
         }
 
+        .gallery__item--8 {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 6;
+            grid-row-end: 7;
+        }
+
+        .gallery__item--9 {
+            grid-column-start: 4;
+            grid-column-end: 7;
+            grid-row-start: 6;
+            grid-row-end: 7;
+        }
 
         /* for media breakpoint below */
         @media only screen and (max-width: 800px) {
+            .navigation {
+                display: none;
+            }
+
+            Header{
+                display:none;
+            }
+
+            .designHeader{
+                margin-top:-1.6em;
+            }
+            
             .navigation-mobile {
                 top: 0px;
                 margin-top: 0px;
@@ -236,7 +268,7 @@
                 position: fixed;
                 text-align: left;
                 z-index: 100;
-                background: #3cb8b4;
+                background: var(--main-color);
                 margin-bottom: 0;
             }
 
@@ -245,7 +277,7 @@
                 grid-template-rows: 1fr;
             }
 
-            .gallery__item--1, .gallery__item--2, .gallery__item--3, .gallery__item--4, .gallery__item--5, .gallery__item--6, .gallery__item--7 {
+            .gallery__item--1, .gallery__item--2, .gallery__item--3, .gallery__item--4, .gallery__item--5, .gallery__item--6, .gallery__item--7, .gallery__item--8, .gallery__item--9 {
                 grid-column: auto;
                 grid-row: auto;
             }
@@ -263,10 +295,10 @@
             <li><a href="index.html#contactForm">Contact</a></li>
         </ul>
     </nav>
-    <header>
+    <header class="sticky">
         <a href="./index.html"><img id="siteLogo" src="./images/Logo.png" alt="Grace Peng, designer, logo" /></a>
         <div>
-            <a href="./index.html"><h1 id="top">Grace Peng</h1></a>
+            <!-- <a href="./index.html"><h1 id="top">Grace Peng</h1></a> -->
             <nav>
                 <ul class="navigation">
                     <li><a href="./index.html">Home</a></li>
@@ -278,15 +310,17 @@
         </div>
     </header>
     
+    <div class="content">
     <div class="designHeader">
         <div id="designTitle">
-            <h1><strong>Design Odds & Ends</strong></h1>
+            <h1>Design Odds & Ends</h1>
         </div>
     </div>
 
     <div class="container">
+        <h3 class="designSubtitle"><strong>Interested in my thought process? Go to each design for more info.</strong></h3>
+        <br>
         <div class="gallery">
-                
             <figure class="gallery__item gallery__item--1">
                 <a href="zoo404.html">
                     <img class="gallery__img" src="./images/Zoo404Page.png" alt="zoo 404 page"/>
@@ -308,7 +342,7 @@
             <figure class="gallery__item gallery__item--4">
                 <a href="LogicalLogo.html">
                     <img class="gallery__img" src="./images/logicalimaginationlogo.png" alt="logo for Logical Imagination"/>
-                    <p class="title-small">Logical Imagination Logo Design</p> 
+                    <p class="title-small">LI Logo Design</p> 
                 </a>
             </figure>
             <figure class="gallery__item gallery__item--5">
@@ -329,23 +363,54 @@
                     <p class="title">Candy Shop Store Receipt</p> 
                 </a>
             </figure>
+            <figure class="gallery__item gallery__item--8">
+                    <img class="gallery__img" src="./images/KaladinPersona.png" alt="Kaladin Persona Design"/>
+                    <p class="title" style="color:white">Persona Design-Kaladin</p> 
+                </a>
+            </figure>
+            <figure class="gallery__item gallery__item--9">
+                    <img class="gallery__img" src="./images/kaladinjourneymap.png" alt="Kaladin Journey Map"/>
+                    <p class="title" style="color:white">Journey Map-Kaladin</p> 
+                </a>
+            </figure>
         </div>
-
+    </div>
     </div>
 
 </body>
     <footer>
         <ul>
-            <li><a href="https://dribbble.com/graceyp" title="dribbble"><i class="fa-solid fa-basketball"></i></a></li>
+            <li><a href="https://www.figma.com/@graceyp" title="figma"><i class="fa-brands fa-figma"></i></a></li>
             <li><a href="https://www.instagram.com/gracey_peng/" title="instagram"><i
                         class="fa-brands fa-instagram"></i></a></li>
             <li><a href="https://www.pinterest.com/graluffa/" title="pinterest"><i
                         class="fa-brands fa-pinterest"></i></a></li>
             <li><a href="https://www.linkedin.com/in/graceypeng/" title="linked in"><i
                         class="fa-brands fa-linkedin"></i></a></li>
+            <li><a href="mailto:pengg2388@gmail.com" title="email"><i class="fa-solid fa-envelope"></i></a></li>
         </ul>
-        <p>&copy; Copyright gracepeng.design</p>
+        <p>&copy; 2022 by Grace Peng</p>
     </footer>
+    <script>
+        // Sticky Navigation; When the user scrolls the page, execute myFunction
+        window.onscroll = function() {myFunction()};
+
+        // Get the navbar
+        var navbar = document.getElementById("navigation");
+
+        // Get the offset position of the navbar
+        var sticky = navbar.offsetTop;
+
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+        //end sticky navigation code//
+    </script>
 </body>
 
 </html>

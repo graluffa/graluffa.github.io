@@ -1,25 +1,26 @@
 
 :root {
-    --main-color: #3cb8b4;
+    --main-color: #007C77;
     --alt-color: #ffbd3c;
     --main-text-color: #1B1A19;
     --accent-color: #A88BBA;
     --rounded-corner: 5px;
-    --main-color-faded: #3cb8b450;
+    --main-color-faded: #c2e9e7;
     --dark-background-color: #201E1E;
   }
   
 html {
-    font-size: 16px;
+    font-size: 17px;
 }
 
 body {
-    font-family: 'Karla', sans-serif;
+    font-family: 'Jost', sans-serif;
     min-width: 350px;
     color: var(--main-text-color);
 }
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Lora', serif;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
 }
 
 img{
@@ -51,6 +52,7 @@ a {
 }
 a:hover {
     color: var(--alt-color);
+    text-decoration: underline;
 }
 
 .fa-solid {
@@ -65,9 +67,10 @@ a:hover {
 body > header {
     text-align: right;
     padding: 0.5em 3em;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.16);
-    margin-bottom:1.3em;
+    /*border-bottom: 1px solid rgba(0, 0, 0, 0.08);*/
+    /* margin-bottom:0.5em; */
 }
+
 body > header:after {
     content: "";
     display: block;
@@ -75,7 +78,7 @@ body > header:after {
 }
 
 body> header nav{
-    margin-top:2em;
+    margin-top:0.98em;
 }
 
 body > header img {
@@ -85,24 +88,22 @@ body > header img {
 }
 
 #siteLogo {
-    max-width: 50px;
+    max-width: 60px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 0.5em;
+    margin-top: 0.3em;
     display: block;
-    margin-bottom: 1em;
 }
 
 #siteLogo:hover {
-    /* transform: rotateZ(-121deg) translateY(40px) translateX(10px); */
-    transform: rotateZ(-121deg) translateY(6px) translateX(13px);
+    /* transform: rotateZ(-90deg) translateY(9px) translateX(-3px); */
+    content: url(./images/LogoFlip.png);
 }
 
 .MonicoImage {
     margin-left: auto;
     margin-right:auto;
     max-width:75%;
-    padding-top: 1.3em;
 }
 body > header h1 {
     margin-top: 1em;
@@ -125,7 +126,7 @@ body > header nav li {
     margin-top: 0.55em;
 }
 body > header nav a {
-    font-weight: bold;
+    font-weight: 500;
 }
 
 main {
@@ -179,6 +180,7 @@ button[type=submit] {
     padding: 0.2em 0.8em;
 }
 
+
 .text-group{
     display:flex;
     flex-direction:row;
@@ -207,28 +209,6 @@ button[type=submit] {
 
 .navigation-mobile {
     display: none;
-}
-
-#myBtn {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 30px;
-    z-index: 99;
-    font-size: 18px;
-    border: none;
-    outline: none;
-    background-color: var(--alt-color);
-    color: var(--main-text-color);
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 4px;
-    width:80px;
-}
-
-#myBtn:hover {
-    background-color:#ffdfa0;
-    color:var(--main-text-color)
 }
 
 
@@ -260,6 +240,18 @@ button[type=submit] {
         margin-left: auto;
         margin-bottom: 1em;
     }
+
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color:#FFFFFF;
+        z-index: 999;            
+        }
+
+    .sticky + .content {
+        padding-top: 60px;
+    }
 }
 
 @media screen and (max-width: 800px){
@@ -286,7 +278,7 @@ button[type=submit] {
         position: fixed;
         text-align: left;
         z-index: 100;
-        background: #3cb8b4;
+        background:  var(--main-color);
         margin-bottom: 0;
     }
 

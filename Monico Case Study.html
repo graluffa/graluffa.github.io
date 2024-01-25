@@ -4,12 +4,11 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./images/logofavicon.png" type="image/png" />
-    <title>Grace Peng</title>
+    <title>Grace Peng|UX Designer</title>
     <script src="https://kit.fontawesome.com/1f06a40a7f.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;700&family=Lora&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700&family=Jost:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">  
     <link href="./reset.css" rel="stylesheet" />
     <link href="./styles.css" rel="stylesheet" />
     <style>
@@ -27,6 +26,10 @@
             100% {
                 opacity: 1;
             }
+        }
+
+        .content{
+            margin-top:1.6em;
         }
 
         h2 i {
@@ -61,7 +64,7 @@
         }
 
         .case-study-teaser-text {
-            font-size: 1.5em;
+            font-size: 1.3em;
         }
 
         .case-study-teaser {
@@ -85,12 +88,15 @@
         .project-title {
             font-size: 2.8em;
             margin-bottom: -0.7em;
+            font-weight:600;
         }
 
         .project-description {
             font-size: 2em;
             margin-bottom: 0.3em;
             color: rgb(89, 41, 113);
+            font-weight:600;
+            font-style:italic;
         }
 
         .facts-details {
@@ -99,7 +105,7 @@
 
 
         .large-paragraph {
-            font-size: 1rem;
+            font-size: 1.05rem;
             line-height: 1.4;
         }
 
@@ -109,20 +115,54 @@
             line-height: 1.2;
             font-family: 'Courier New', Courier, monospace;
             font-weight: bold;
+            padding-top:0.2em;
+        }
+
+        .reflection-img{
+            width:30%; 
+            margin-left:auto; 
+            margin-right:auto;
+            margin-top:1em;
         }
 
         .UCD-header {
-            font-weight: bolder;
+            font-weight: 600;
             padding: 0 16px;
             font-size:1.8em;
         }
 
+        .Explorations{
+            margin-top:-1em;
+        }
+
+        .text-list{
+            font-weight:400;
+            margin-left:1.1em;
+            margin-right:auto;
+            line-height:1.618em;
+            }
+            
+
+        .text-list2{
+            font-weight:400;
+            margin-top:-1em;
+            margin-left:1.1em;
+            margin-right:auto;
+            line-height:1.618em;
+        }
+
+        span{
+            font-weight:500;
+        }
+
+
         .gallery-monico{
             display:grid;
-            grid-template-columns: repeat(4,auto);
-            grid-template-rows:repeat(4,auto);
-            grid-gap:25px;
+            grid-template-columns: repeat(5,auto);
+            grid-template-rows:repeat(5,auto);
+            grid-gap:34px;
             box-sizing:content-box;
+            padding-left:2.1em;
             margin-right:14em;
         }
 
@@ -172,6 +212,28 @@
         .navigation-mobile {
                 display: none;
         }
+        
+        .mobilePrototypeButton{
+            display:none;
+        }
+
+        #viewFinalPrototype {
+            padding:0.5em 0.4em;
+            text-align: center;
+            border-radius: 5px;
+            border: 2px solid #000;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 0.9rem;
+            color: rgb(22, 21, 21);
+            background: var(--main-color-faded);
+            }
+
+        #viewFinalPrototype:hover{
+            transform: scale(1.1);
+            transition: all 0.2s ease-in-out;
+        }
+        
 
         @media screen and (max-width: 800px){
             body > header div ul {
@@ -180,6 +242,15 @@
             .navigation {
                 display: none;
             }
+
+            Header{
+                display:none;
+            }
+
+            .studyHeader{
+                margin-top:-1.2em;
+            }
+
             nav {
                 padding-top:50px;
             }
@@ -197,12 +268,16 @@
                 position: fixed;
                 text-align: left;
                 z-index: 100;
-                background: #3cb8b4;
+                background: var(--main-color);
                 margin-bottom: 0;
             }
 
             .navigation-mobile > li {
                 list-style: none;
+            }
+
+            .Explorations{
+                margin-top: 1em;
             }
 
             .navigation-mobile li {
@@ -229,6 +304,14 @@
                 flex-direction: column-reverse;
             }
 
+            .intro-teaser-left{
+                width:100%;
+            }
+
+            .studyContent{
+                margin-left:1em;
+            }
+
             .gallery-monico{
                 max-width:100%;
                 display:block;
@@ -237,6 +320,18 @@
 
             body > header div {
                 display: block;
+            }
+
+            .figmaLarge{
+                display:none;
+            }
+            
+            .mobilePrototypeButton{
+                display:inline;
+                margin-bottom:2em;
+                float:right;
+                margin-right:1em;
+
             }
 
         }
@@ -253,12 +348,9 @@
             <li><a href="index.html#contactForm">Contact</a></li>
         </ul>
     </nav>
-    <header>
+    <header class="sticky">
         <a href="./index.html"><img id="siteLogo" src="./images/Logo.png" alt="Grace Peng, designer, logo" /></a>
-        <div>
-            <a href="./index.html">
-                <h1 id="top">Grace Peng</h1>
-            </a>
+        <div> 
             <nav role="navigation">
                 <ul class="navigation">
                     <li><a href="./index.html">Home</a></li>
@@ -270,17 +362,17 @@
         </div>
     </header>
 
+    <div class="content">
     <div class="studyHeader">
-        <div style="margin-top: -1.3em;">
+        <div>
             <img class="MonicoImage" src="./images/monicomockup.png" alt="Monico website sign up page" />
         </div>
     </div>
     <section class="case-wrapper">
         <div class="studyContent">
             <div id="case-study-introduction">
-                <h1 class="project-title">
-                    <strong>Where it all began</strong></h1>
-                <h2 class="project-description"><em>How do we make traveling for users a smoother journey?</em></h2>
+                <h1 class="project-title">Where it all began</h1>
+                <h2 class="project-description">How do we make traveling for users a smoother journey?</h2>
             </div>
             <div class="case-study-teaser">
                 <div class="intro-teaser-left">
@@ -289,6 +381,7 @@
                             specifically challenges they face. </p>
                         <p>Our goal is to gather intel on how to improve their experience so they feel like one of the local residents. </p>
                         <p>With the insights we gather, we hope to create a product or service that users need and want to use for easier traveling.</p>
+                        <em>Peek at my teammates' work: <a href="https://www.michaelabrams.co">Michael Abrams</a>, <a href="https://www.tamekiahatter.com">Tamekia Hatter</a>, <a href="https://www.edwardallen.org">Edward Newkirk</a>, <a href="https://www.melimedi.com">Monet Wright</a></em>
                     </div>
                 </div>
                 <div class="case-study-teaser-right">
@@ -303,7 +396,7 @@
                         <p class="facts-details">User Interviews & Surveys</p>
                         <p class="facts-details">Empathy Map & Journey Map</p>
                         <h6>Duration</h6>
-                        <p class="facts-details">Timeline: 12 weeks (ongoing)</p>
+                        <p class="facts-details">Timeline: 12 weeks</p>
                     </div>
                 </div>
             </div>
@@ -322,13 +415,14 @@
                 </p>
                 <p class="reflections-text col-2">
                     See my notes and reflections in these side notes over here!
+                    <img class="reflection-img" src="./images/Gracevector.png" alt="grace vector cartoon"/>
                 </p>
             </div>
 
         </div>
 
         <div>
-            <h2 class="UCD-header">Explorations & Research</h2>
+            <h2 class="UCD-header Explorations">Explorations & Research</h2>
             <div class="text-group">
                 <p class="large-paragraph medium-spacer col-1">
                     We used affinity diagrams to generate open-ended research questions for user interviews. With our
@@ -372,15 +466,13 @@
     
             <div class="text-group">
                 <ul class="text-list medium-spacer col-1">
-                    <li><strong>Our users want to feel safe during traveling and know their belongings are secure</strong>
-                    </li>
-                    <li><strong>Our users want to know where to go, what the current events are (local news/major
-                            celebrations)</strong></li>
-                    <li><strong>Our users do not see language as a challenge- many locals can speak English</strong></li>
-                    <li><strong>82% of our users (164 people) said that if they had a guide to assist them during traveling, they would use them</strong></li>
-                    <li><strong>44% of our users said they preferred having a tour guide person</strong></li>
-                    <li><strong>42% of our users said they preferred phone apps</strong></li>
-                    <li><strong>1/3 of our users felt that Time and Money were their biggest barriers to tour guides</strong></li>
+                    <li>Users want to feel safe during traveling and know their belongings are secure</li>
+                    <li>Users want to know where to go, what the current events are (local news/major celebrations).</li>
+                    <li>Users do not see language as a challenge - they use Google translate and many locals can speak English.</li>
+                    <li>82% of the users (164 people) said that they would use a guide to assist them if they had access to them.</li>
+                    <li>44% said they preferred a person over an app for translation. </li>
+                    <li>42% said they preferred phone apps.</li>
+                    <li>33% felt that Time and Money were their biggest barriers to tour guides.</li>
                 </ul>
                 <p class="reflections-text col-2">
                     Our research revealed some surprising and humbling data:
@@ -395,9 +487,9 @@
             <div class="text-group">
                 <p class="large-paragraph medium-spacer col-1">
                     With our extensive research completed, it was time to define who our users were. We synthesized all the
-                    interview data and created a user persona.
-                    <img src="./images/MonicoEmpathyMap.png" alt="image of empathy map" />
+                    interview data and created a user persona. <br><br>
                     <img src="./images/MonicoPersonaRachel.png" alt="image of user persona" />
+                    <img src="./images/MonicoEmpathyMap.png" alt="image of empathy map" />
                 </p>
                 <p class="reflections-text col-2">
                     This persona was helpful in reminding us who we are designing for and to put our opinions aside.
@@ -429,17 +521,23 @@
             <h2 class="UCD-header">Brainstorming, ideating, rinse, & repeat. </h2>
             <div class="text-group">
                 <p class="large-paragraph medium-spacer col-1">
-                    Our team used some "How Might We" questions to define . This included: How might we incorporate all of
-                    our users needs (safety and knowledge of events) into one cohesive service? How might we design our
+                    Our team used more "How Might We" questions to define our information architecture and user flow. This included: How might we incorporate all of our users needs (safety and knowledge of events) into one cohesive service? How might we design our
                     layouts so our user can search for what they need?
                     <br>
                 </p>
                 <p class="reflections-text col-2">
-                    During the following few weeks, we used these questions to guide our wireframing and prototyping.
+                    During the following few weeks, we used these questions to guide our wireframing and prototyping. 
+                </p>
+            </div>
+            <div class="text-group">
+                <p class="large-paragraph medium-spacer col-1">
+                    <img src="./images/monicositemap.png" alt="Monico Site Map Image"/>
+                </p>
+                <p class="reflections-text col-2">
+                    First, we created a Informational Architecture diagram for organizing and prioritizing our page and content layout. This helped us decide the content on primary and secondary pages as well as user flow.
                 </p>
             </div>
         </div>
-
         <div class="gallery-monico col-1">
             <figure class="gallery_item--1">
             <img class="gallery_img" src="./images/Signupwireframe.png" alt="wireframe of Monico sign up page" style="border:1px solid #3b3434"/>
@@ -453,59 +551,139 @@
             <figure class="gallery_item--4">
             <img class="gallery_img" src="./images/paymentwireframe.png" alt="wireframe of payment page" style="border:1px solid #3b3434"/>
             </figure>
-        </div>
+        </div>  
+
         <br>
         <div>
-            <h2 class="UCD-header">Designing and testing to come! </h2>
+            <h2 class="UCD-header">High-Fidelity Designs-Round 1 </h2>
             <div class="text-group">
                 <p class="large-paragraph medium-spacer col-1">
-                    Come back in May to see our final results. We are currently in the process of finalizing our product and testing it with our users.
+                    After iterating, we settled on the design below and made a mobile version to make sure the design is responsive and effective across different screen sizes. We added just enough information and interactions to allow users to navigate through the pages and complete tasks presented to them during usability testing.
+                    <br>
+                    <br>
+                    <img src="./images/version1.jpg" alt="screenshot of monico website version 1"/>
+                    <br>
+                    <img src="./images/mobilemonico.jpg" alt="monico mobile screens"/>
                 </p>
                 <p class="reflections-text col-2">
-                    Thank you for your patience.
+                    We decided to start with a larger screen size and gracefully degrade to a mobile screen. This challenged us to think about what things were necessary for our users and what could be removed as we moved to a smaller screen.
+                </p>
+            </div>
+        </div>
+
+        <div>
+            <h2 class="UCD-header">Testing and getting feedback </h2>
+            <div class="text-group">
+                <p class="large-paragraph medium-spacer col-1">
+                    With our prototyping done, we recruited participants and conducted usability tests to see how users interact with our websites and identify where we can make improvements.
+                    <br>
+                    <br>
+                    <b>Test Objectives:</b> Can users easily complete the task? What paths do they take? What can we improve?
+                    <br>
+                    <br>
+                    <b>Tasks:</b> 1. Search for activities in Madrid, Spain. 2. Book a tour guide.
+                    <br>
+                    <br>
+                    <b>User Summary: </b>
+                </p>
+                <p class="reflections-text col-2">
+                    We were curious if our users enjoyed our design, would want to reuse it, and could accomplish their goal.
+                </p>
+            </div>
+
+            <div class="text-group">
+                <ul class="text-list2 medium-spacer col-1">
+                    <li><span>Method:</span> Moderated Usability Testing (Think Aloud) & Multichannel Study</li>
+                    <li><span># of Participants:</span> 10 users</li>
+                    <li><span>Demographics:</span> 25-35 years old; male & female</li>
+                    <li><span>Average Time:</span> 10 minutes </li>
+                    <li><span>Task Completion Rate:</span> 100%</li>
+                    <li><span>What we did well:</span> Color scheme, Illustrations, Animations</li>
+                    <li><span>Improvement:</span> Consistency between pages, calendar and hamburger menu affordance, security of checkout</li>
+                </ul>
+                <p class="reflections-text col-2" style="margin-top:-1em;">
+                    We wanted to test user flow and also assess how our website does on different screens.
+                </p>
+            </div>
+
+            <div class="text-group">
+                <p class="large-paragraph medium-spacer col-1">
+                    Our users completed the task, but encountered many roadblocks along the way. Some features confused users while others were not used at all, to our surprise. Users felt some pages of the site reminded them of Wikipedia and lacked engagement.
+                </p>
+                <p class="reflections-text col-2">
+                    After extensive discussion and review, our team decided we needed to re-think our home and services designs.
+                </p>
+            </div>
+        </div>
+
+        <div>
+            <h2 class="UCD-header">Final Product</h2>
+            <div class="text-group">
+                <p class="large-paragraph medium-spacer col-1">
+                    Our final product is a platform where locals can post about places and events they enjoy in their hometown so tourists can use it while planning their trips. For people that want planning assistance, we offer a tour guides. <br><br>
+                    <b>Changes we made</b>
+                </p>
+                <p class="reflections-text col-2">
+                    We wanted to give people options depending on their planning style.
+                </p>
+            </div>
+
+            <div class="text-group">
+                <ul class="text-list2 medium-spacer col-1">
+                    <li>Implemented a collapsible sticky navigation on the left, catering to people's tendency for Z-Pattern of reading.</li>
+                    <li>The calendar and tour guide pages are on separate screens, utilizing the progressive disclosure design pattern.</li>
+                    <li>Our home page was made scrollable, advertising our service along with our main platform.</li>
+                </ul>
+                <p class="reflections-text col-2" style="margin-top:-1em;">
+                    We followed the Agile method of creating a Minimal Viable Product (MVP). We tackled these changes first because we felt user flow was most important. <br><br>
+                </p>
+            </div>
+
+            <div class="mobilePrototypeButton">
+                <a href="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FwvJoRnS3G3vUZ90Ewjru1B%2FMonico-Final-Product%3Fpage-id%3D0%253A1%26node-id%3D2%253A801%26viewport%3D241%252C48%252C0.05%26scaling%3Dscale-down%26starting-point-node-id%3D2%253A801%26hide-ui=1" id="viewFinalPrototype">View Final Prototype</a>
+            </div>
+
+            <div class="text-group">
+                <iframe class="text-list2 medium-spacer col-1 figmaLarge" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FwvJoRnS3G3vUZ90Ewjru1B%2FMonico-Final-Product%3Fpage-id%3D0%253A1%26node-id%3D2%253A801%26viewport%3D536%252C375%252C0.05%26scaling%3Dscale-down%26starting-point-node-id%3D2%253A801" allowfullscreen title="Monico Clickable Prototype"></iframe>
+                <p class="reflections-text col-2" style="margin-top:-1em;">
+                    The sticky navigation gives the users control and freedom. Progressive disclosure with the calendar and tour guide section prevents errors and avoids overwhelming the user.
                 </p>
             </div>
         </div>
     </section>
-
-    
+    </div>    
 
     <footer>
         <ul>
-            <li><a href="https://dribbble.com/graceyp" title="dribbble"><i class="fa-solid fa-basketball"></i></a></li>
+            <li><a href="https://www.figma.com/@graceyp" title="figma"><i class="fa-brands fa-figma"></i></a></li>
             <li><a href="https://www.instagram.com/gracey_peng/" title="instagram"><i
                         class="fa-brands fa-instagram"></i></a></li>
             <li><a href="https://www.pinterest.com/graluffa/" title="pinterest"><i
                         class="fa-brands fa-pinterest"></i></a></li>
             <li><a href="https://www.linkedin.com/in/graceypeng/" title="linked in"><i
                         class="fa-brands fa-linkedin"></i></a></li>
+            <li><a href="mailto:pengg2388@gmail.com" title="email"><i class="fa-solid fa-envelope"></i></a></li>
         </ul>
-        <p>&copy; Copyright gracepeng.design</p>
+        <p>&copy; 2022 by Grace Peng</p>
     </footer>
 
-    <button onclick="topFunction()" id="myBtn" title="Go to top">Back to top</button>
-
     <script>
-        //Get the button
-        var mybutton = document.getElementById("myBtn");
+        // Sticky Navigation; When the user scrolls the page, execute myFunction
+        window.onscroll = function() {myFunction()};
 
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function () {
-            scrollFunction()
-        };
+        // Get the navbar
+        var navbar = document.getElementById("navigation");
 
-        function scrollFunction() {
-            if (document.body.scrollTop >20 || document.documentElement.scrollTop > 20) {
-                mybutton.style.display = "block";
+        // Get the offset position of the navbar
+        var sticky = navbar.offsetTop;
+
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
             } else {
-                mybutton.style.display = "none";
+                navbar.classList.remove("sticky");
             }
-        }
-
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
         }
     </script>
 

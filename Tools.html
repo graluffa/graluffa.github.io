@@ -4,14 +4,33 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./images/logofavicon.png" type="image/png" />
-    <title>Grace Peng</title>
+    <title>Grace Peng|UX Designer</title>
     <script src="https://kit.fontawesome.com/1f06a40a7f.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;700&family=Lora&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700&family=Jost:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"> 
     <link href="./reset.css" rel="stylesheet" />
     <link href="./styles.css" rel="stylesheet" />
     <style>
+
+        body {
+            animation: fadeInAnimation ease 2s;
+            animation-iteration-count: 1;
+            animation-fill-mode: backwards;
+        }
+
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .content{
+            margin-top:1.6em;
+        }
 
         h2 i {
             font-size: 1.2rem;
@@ -35,7 +54,6 @@
         #designTitle{
             font-size: 2em;
             text-align:center;
-            margin-top: -0.6em;
             padding-bottom: 0.5em;
             padding-top: 0.5em;
         }
@@ -91,6 +109,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
         }
+
 
         /* CSS GRID */
 
@@ -151,12 +170,20 @@
         }   
 
 
-
-        /* for media breakpoint below */
-        @media screen and (min-width: 48em) {}
-
         /* for media breakpoint below */
         @media only screen and (max-width: 800px) {
+            .navigation {
+                display: none;
+            }
+
+            Header{
+                display:none;
+            }
+
+            .designHeader{
+                margin-top:-1.6em;
+            }
+            
             .gallery {
                 grid-template-columns: 1fr;
                 grid-template-rows: 1fr;
@@ -181,8 +208,28 @@
                 position: fixed;
                 text-align: left;
                 z-index: 100;
-                background: #3cb8b4;
+                background: var(--main-color);
                 margin-bottom: 0;
+            }
+
+            figure:hover .title-small{
+                opacity: 1;
+            }
+
+            figure .title-small {
+                opacity: 0;
+                transition: opacity 400ms ease;
+            }
+
+            .title-small {
+                padding: var(--space);
+                font-size: 1em;
+                font-family: var(--font-secondary);
+                line-height: 1.2;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -70%);
             }
         }
 
@@ -199,10 +246,10 @@
             <li><a href="index.html#contactForm">Contact</a></li>
         </ul>
     </nav>
-    <header>
+    <header class="sticky">
         <a href="./index.html"><img id="siteLogo" src="./images/Logo.png" alt="Grace Peng, designer, logo" /></a>
         <div>
-            <a href="./index.html"><h1 id="top">Grace Peng</h1></a>
+            <!-- <a href="./index.html"><h1 id="top">Grace Peng</h1></a> -->
             <nav>
                 <ul class="navigation">
                     <li><a href="./index.html">Home</a></li>
@@ -214,9 +261,10 @@
         </div>
     </header>
     
+    <div class="content">
     <div class="designHeader">
         <div id="designTitle">
-            <h1><strong>Go-to Design Tools</strong></h1>
+            <h1>Design Toolbox</h1>
         </div>
     </div>
     
@@ -224,41 +272,63 @@
         <div class="gallery">
                 
             <figure class="gallery__item gallery__item--1">
-                <img class="gallery__img" src="./images/AffinityDiagramHWgroup.jpg" alt="zoo 404 page"/>
+                <img class="gallery__img" src="./images/AffinityDiagramHWgroup.jpg" alt="affinity diagram"/>
                 <p class="title">Affinity Diagram. Prompt: Our class of 30 people each brainstormed questions for an interview. We then utilized the diagram to consolidate all our questions into 8-10 total questions.</p> 
             </figure>
             <figure class="gallery__item gallery__item--2">
-                <img class="gallery__img" src="./images/mindmap.png" alt="Two Door Cinema Club page"/>
+                <img class="gallery__img" src="./images/mindmap.png" alt="mind map"/>
                 <p class="title">Using the Mindmap tool to organize my notes on the Survey Design Process.</p> 
             </figure>
             <figure class="gallery__item gallery__item--3">
-                <img class="gallery__img" src="./images/KaladinPersona.png" alt="logo for cosmetics"/>
+                <img class="gallery__img" src="./images/KaladinPersona.png" alt="kaladin persona"/>
                 <p class="title">User Persona of a character (Kaladin)</p> 
             </figure>
             <figure class="gallery__item gallery__item--4">
-                <img class="gallery__img" src="./images/kaladinjourneymap.png" alt="logo for Logical Imagination"/>
+                <img class="gallery__img" src="./images/kaladinjourneymap.png" alt="kaladin journey map"/>
                 <p class="title">Kaladin's Journey Map</p> 
             </figure>
             <figure class="gallery__item gallery__item--5">
-                <img class="gallery__img" src="./images/WurmanLATCH.png" alt="John Legend Contest Page"/>
-                <p class="title">Using Wurman's LATCH principles, my group organized Hershey's main products into 5 categories: Location, Alphabetical, Time, Categories, and Hierarchy.</p> 
+                <img class="gallery__img" src="./images/WurmanLATCH.png" alt="hershey's LATCH"/>
+                <p class="title title-small">My group used Wurman's LATCH to organize Hershey's products into 5 categories: Location, Alphabetical, Time, Categories, and Hierarchy.</p> 
             </figure>
         </div>
+    </div>
     </div>
 
 </body>
     <footer>
         <ul>
-            <li><a href="https://dribbble.com/graceyp" title="dribbble"><i class="fa-solid fa-basketball"></i></a></li>
+            <li><a href="https://www.figma.com/@graceyp" title="figma"><i class="fa-brands fa-figma"></i></a></li>
             <li><a href="https://www.instagram.com/gracey_peng/" title="instagram"><i
                         class="fa-brands fa-instagram"></i></a></li>
             <li><a href="https://www.pinterest.com/graluffa/" title="pinterest"><i
                         class="fa-brands fa-pinterest"></i></a></li>
             <li><a href="https://www.linkedin.com/in/graceypeng/" title="linked in"><i
                         class="fa-brands fa-linkedin"></i></a></li>
+            <li><a href="mailto:pengg2388@gmail.com" title="email"><i class="fa-solid fa-envelope"></i></a></li>
         </ul>
-        <p>&copy; Copyright gracepeng.design</p>
+        <p>&copy; 2022 by Grace Peng</p>
     </footer>
+    <script>
+        // Sticky Navigation; When the user scrolls the page, execute myFunction
+        window.onscroll = function() {myFunction()};
+
+        // Get the navbar
+        var navbar = document.getElementById("navigation");
+
+        // Get the offset position of the navbar
+        var sticky = navbar.offsetTop;
+
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+        //end sticky navigation code//
+    </script>
 </body>
 
 </html>
